@@ -1,0 +1,11 @@
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.exe.config
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.exe
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.pdb
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.AssemblyReference.cache
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.SuggestedBindingRedirects.cache
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Form1.resources
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Properties.Resources.resources
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.GenerateResource.cache
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CoreCompileInputs.cache
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.exe
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.pdb
