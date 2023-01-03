@@ -9,3 +9,14 @@ P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CoreCompileInputs.cache
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.exe
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.pdb
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.exe.config
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.exe
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.pdb
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.AssemblyReference.cache
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.SuggestedBindingRedirects.cache
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Form1.resources
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Properties.Resources.resources
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.GenerateResource.cache
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CoreCompileInputs.cache
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.exe
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.pdb
