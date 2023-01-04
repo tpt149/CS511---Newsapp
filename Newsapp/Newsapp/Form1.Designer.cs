@@ -32,27 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuButton = new System.Windows.Forms.PictureBox();
+            this.homeContainer = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_home = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.menuButton = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.sidebarTime = new System.Windows.Forms.Timer(this.components);
-            this.homeContainer = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.homeTime = new System.Windows.Forms.Timer(this.components);
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.homeContainer.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -64,10 +64,10 @@
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.MaximumSize = new System.Drawing.Size(256, 595);
-            this.sidebar.MinimumSize = new System.Drawing.Size(101, 595);
+            this.sidebar.MaximumSize = new System.Drawing.Size(256, 799);
+            this.sidebar.MinimumSize = new System.Drawing.Size(101, 799);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(256, 595);
+            this.sidebar.Size = new System.Drawing.Size(256, 799);
             this.sidebar.TabIndex = 0;
             // 
             // panel1
@@ -78,6 +78,66 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 109);
             this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(99, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Menu";
+            // 
+            // menuButton
+            // 
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
+            this.menuButton.Location = new System.Drawing.Point(25, 31);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(47, 47);
+            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuButton.TabIndex = 0;
+            this.menuButton.TabStop = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            // 
+            // homeContainer
+            // 
+            this.homeContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.homeContainer.Controls.Add(this.panel6);
+            this.homeContainer.Controls.Add(this.panel2);
+            this.homeContainer.Location = new System.Drawing.Point(3, 118);
+            this.homeContainer.MaximumSize = new System.Drawing.Size(256, 125);
+            this.homeContainer.MinimumSize = new System.Drawing.Size(256, 67);
+            this.homeContainer.Name = "homeContainer";
+            this.homeContainer.Size = new System.Drawing.Size(256, 67);
+            this.homeContainer.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.panel6.Location = new System.Drawing.Point(1, 75);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(253, 46);
+            this.panel6.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-25, -16);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(296, 71);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Home";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -155,70 +215,10 @@
             this.button3.Text = "About";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // menuButton
-            // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
-            this.menuButton.Location = new System.Drawing.Point(25, 31);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(47, 47);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 0;
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(99, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Menu";
-            // 
             // sidebarTime
             // 
             this.sidebarTime.Interval = 30;
             this.sidebarTime.Tick += new System.EventHandler(this.sidebarTime_Tick);
-            // 
-            // homeContainer
-            // 
-            this.homeContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.homeContainer.Controls.Add(this.panel6);
-            this.homeContainer.Controls.Add(this.panel2);
-            this.homeContainer.Location = new System.Drawing.Point(3, 118);
-            this.homeContainer.MaximumSize = new System.Drawing.Size(256, 125);
-            this.homeContainer.MinimumSize = new System.Drawing.Size(256, 67);
-            this.homeContainer.Name = "homeContainer";
-            this.homeContainer.Size = new System.Drawing.Size(256, 67);
-            this.homeContainer.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.panel6.Location = new System.Drawing.Point(1, 75);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(253, 46);
-            this.panel6.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-25, -16);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(296, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // homeTime
             // 
@@ -229,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 595);
+            this.ClientSize = new System.Drawing.Size(1211, 799);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -238,12 +238,12 @@
             this.Text = "Form1";
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.homeContainer.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
