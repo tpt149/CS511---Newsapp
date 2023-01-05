@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b2574051-d00d-4902-b13b-e021b3d22223": {
+      "ProjectGuid": "b2574051-d00d-4902-b13b-e021b3d22223",
+      "DisplayName": "Newsapp",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
