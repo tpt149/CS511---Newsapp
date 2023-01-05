@@ -20,3 +20,4 @@ C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.GenerateRes
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CoreCompileInputs.cache
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.exe
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.pdb
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Main.resources
