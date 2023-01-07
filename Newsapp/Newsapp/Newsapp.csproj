@@ -55,6 +55,12 @@
     <Compile Include="ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="high_view_Article.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="high_view_Article.Designer.cs">
+      <DependentUpon>high_view_Article.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <EmbeddedResource Include="Article.resx">
       <DependentUpon>Article.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="high_view_Article.resx">
+      <DependentUpon>high_view_Article.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -19,9 +19,12 @@ namespace Newsapp
         public static DataTable Table_News_Entertain = new DataTable();
         public static DataTable Table_News_Travel = new DataTable();
         public static DataTable Table_News_Sport = new DataTable();
+        public static DataTable table_All = new DataTable();
+
         public Main()
         {
             InitializeComponent();
+
         }
         private void Main_Load(object sender, EventArgs e)
         {
@@ -49,15 +52,18 @@ namespace Newsapp
             da_Sport.Dispose();
             #endregion
             #region Display News into Main UI
-            
             Display_News(Table_News_Entertain, flp_News);
             Display_News(Table_News_Sport, flp_News);
             Display_News(Table_News_Travel, flp_News);
             #endregion
-            #region Tạo List Article để phục vụ cho việc sort theo view và date
-            Add_List_Article(List_Article_Sort_By_View, Table_News_Sport);
-            Add_List_Article(List_Article_Sort_By_View, Table_News_Entertain);
-            Add_List_Article(List_Article_Sort_By_View, Table_News_Travel);
+            #region Merge 3 table lại
+            table_All = Table_News_Travel.Copy();
+            table_All.Merge(Table_News_Sport);
+            table_All.Merge(Table_News_Entertain);
+            #endregion
+            #region Load Tin xem nhiều nhất
+            table_All.DefaultView.Sort = "View";
+            Display_high_view_News(table_All, flp_TinXemNhieuNhat);
             #endregion
         }
         public void Display_News(DataTable dt,FlowLayoutPanel fl)
@@ -71,6 +77,20 @@ namespace Newsapp
                 article.pic_Article.ImageLocation = dr["Represent"].ToString();
                 article.pic_Article.SizeMode = PictureBoxSizeMode.StretchImage;
                 article.pic_Article.Show();
+            }
+        }
+        public void Display_high_view_News(DataTable dt, FlowLayoutPanel fl)
+        {
+            foreach (DataRow dr in dt.Rows)
+            {
+                high_view_Article article = new high_view_Article();
+                fl.Controls.Add(article);
+                article.lbl_title.Text = dr["titles"].ToString();
+                article.lbl_time.Text = dr["Date"].ToString();
+                article.lbl_view.Text = dr["View"].ToString();
+                article.pic_hight_view_Article.ImageLocation = dr["Represent"].ToString();
+                article.pic_hight_view_Article.SizeMode = PictureBoxSizeMode.StretchImage;
+                article.pic_hight_view_Article.Show();
             }
         }
         private void btn_Travel_Click(object sender, EventArgs e)
@@ -151,51 +171,23 @@ namespace Newsapp
             btn_DangBaiBao.BackColor = Color.FromArgb(30, 40, 45);
         }
         #endregion
-        public void Add_Article(List<Paper> l, Paper f)
-        {
-            int index = 0;
-            if (l.Count == 0)
-            {
-                l.Add(f);
-                index++;
-            }
-            else
-            {
-                foreach (Paper fi in l.ToList())
-                {
-                    if (fi.title == f.title)
-                        continue;
-                    else if (fi.title != f.title && index == l.Count - 1)
-                    {
-                        l.Add(f);
-                    }
-                    index++;
-                }
-            }
-        }
-        public void Add_List_Article(List<Paper> p, DataTable dt)
-        {
-            Paper choose = new Paper();
-            foreach (DataRow dr in dt.Rows)
-            {
-                choose.title = dr["titles"].ToString();
-                choose.view = 0; // Dùng view để sắp xếp và rank theo lượt xem
-                choose.date = (DateTime)dr["Date"]; //Dùng date để sắp xếp và rank theo độ mới
-                Add_Article(p, choose);
-                choose = new Paper();
-            }
-        }
-        public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
+
+        //public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
         private void btn_TinMoi_Click(object sender, EventArgs e)
         {
-            List_Article_Sort_By_View.Sort((p1, p2) => p1.date.CompareTo(p2.date));
             flp_News.Controls.Clear();
             //trộn 3 bảng sau đó sẽ xuất theo thứ tự titles trong List_Article_Sort_By_view
             // Như vậy là hiện ra tin mới
+            table_All.DefaultView.Sort = "Date";
+            #region Xuất theo thứ tự date
+            Display_News(table_All, flp_News);
+            #endregion
         }
 
         private void btn_KhuyenMai_Click(object sender, EventArgs e)
         {
+
+
             //Phải có dữ liệu về các bài báo có khuyến mãi --> thu thập thêm dữ liệu
         }
     }

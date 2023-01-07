@@ -18,16 +18,7 @@ namespace Newsapp
         }
         private void pic_Article_Click(object sender, EventArgs e)
         {
-            Paper choose = new Paper();
-            choose.title = this.lbl_Title.Text;
-           foreach(Paper p in Main.List_Article_Sort_By_View)
-           {
-                if (p.title == this.lbl_Title.Text)
-                    p.view += 1;
-           }
 
-            List<Paper> List_sort_by_view = Sort_By_View(Main.List_Article_Sort_By_View);
-            //List<Paper> List_sort_by_date = Sort_By_Date(Main.List_Article_Sort_By_View);
 
         }
         public void Add_Article(List<Paper> l, Paper f)
@@ -66,20 +57,10 @@ namespace Newsapp
         }
         public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
 
-        public List<Paper> Sort_By_View(List<Paper> p)
-        {
-            p.Sort((p1,p2)=>p1.view.CompareTo(p2.view));
-            return p;
-        }
-        public List<Paper> Sort_By_Date(List<Paper> p)
-        {
-            p.Sort((p1,p2)=>p1.date.CompareTo(p2.date));
-            return p;
-        }
+
         private void Article_Load(object sender, EventArgs e)
         {
-            //sort theo date
-            //sort theo view
+
         }
     }
 }

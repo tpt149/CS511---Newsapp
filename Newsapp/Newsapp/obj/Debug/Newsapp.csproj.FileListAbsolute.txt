@@ -23,3 +23,4 @@ P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Main.re
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Article.resources
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.AssemblyReference.cache
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Read_Article.resources
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.high_view_Article.resources

@@ -297,7 +297,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flp_News.AutoScroll = true;
-            this.flp_News.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flp_News.Location = new System.Drawing.Point(0, 150);
             this.flp_News.Name = "flp_News";
             this.flp_News.Size = new System.Drawing.Size(1133, 653);
@@ -309,7 +308,6 @@
             this.flp_TinXemNhieuNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flp_TinXemNhieuNhat.AutoScroll = true;
-            this.flp_TinXemNhieuNhat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(1139, 402);
             this.flp_TinXemNhieuNhat.Name = "flp_TinXemNhieuNhat";
             this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(285, 401);
@@ -318,7 +316,6 @@
             // Pic_ads
             // 
             this.Pic_ads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pic_ads.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pic_ads.Location = new System.Drawing.Point(1139, 187);
             this.Pic_ads.Name = "Pic_ads";
             this.Pic_ads.Size = new System.Drawing.Size(285, 185);
