@@ -62,7 +62,7 @@
             // 
             this.lbl_date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_date.AutoSize = true;
-            this.lbl_date.Location = new System.Drawing.Point(46, 327);
+            this.lbl_date.Location = new System.Drawing.Point(70, 327);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(30, 13);
             this.lbl_date.TabIndex = 2;

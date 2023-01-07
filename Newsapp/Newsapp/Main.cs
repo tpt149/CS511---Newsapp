@@ -20,7 +20,6 @@ namespace Newsapp
         public static DataTable Table_News_Travel = new DataTable();
         public static DataTable Table_News_Sport = new DataTable();
         public static DataTable table_All = new DataTable();
-
         public Main()
         {
             InitializeComponent();
@@ -171,7 +170,6 @@ namespace Newsapp
             btn_DangBaiBao.BackColor = Color.FromArgb(30, 40, 45);
         }
         #endregion
-
         //public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
         private void btn_TinMoi_Click(object sender, EventArgs e)
         {
@@ -183,12 +181,47 @@ namespace Newsapp
             Display_News(table_All, flp_News);
             #endregion
         }
-
         private void btn_KhuyenMai_Click(object sender, EventArgs e)
         {
 
 
             //Phải có dữ liệu về các bài báo có khuyến mãi --> thu thập thêm dữ liệu
+        }
+        private void txt_Search_Enter(object sender, EventArgs e)
+        {
+            if(txt_Search.Text== "Nhập từ khóa...")
+            {
+                txt_Search.Text = "";
+                txt_Search.ForeColor = Color.Black;
+            }
+        }
+        private void txt_Search_Leave(object sender, EventArgs e)
+        {
+            if (txt_Search.Text == "")
+            {
+                txt_Search.Text = "Nhập từ khóa...";
+                txt_Search.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txt_Search_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                flp_News.Controls.Clear();
+                DataRow[] filteredRows = new DataRow[table_All.Rows.Count];
+                filteredRows = table_All.Select("titles LIKE '%" + txt_Search.Text.Trim() + "%'");
+                foreach (DataRow row in filteredRows)
+                {
+                    Article a = new Article();
+                    flp_News.Controls.Add(a);
+                    a.lbl_date.Text = row["Date"].ToString();
+                    a.lbl_Title.Text = row["titles"].ToString();
+                    a.pic_Article.ImageLocation = row["Represent"].ToString();
+                    a.pic_Article.SizeMode = PictureBoxSizeMode.StretchImage;
+                    a.pic_Article.Show();
+                }
+            }
         }
     }
 }

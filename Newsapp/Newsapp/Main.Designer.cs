@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Search = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -65,7 +65,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_Search);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -73,7 +73,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1427, 106);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -107,18 +107,21 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // txt_Search
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Ivory;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(288, 31);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(372, 35);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Nhập từ khóa...";
+            this.txt_Search.BackColor = System.Drawing.Color.Ivory;
+            this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.ForeColor = System.Drawing.Color.Silver;
+            this.txt_Search.Location = new System.Drawing.Point(288, 31);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Search.Multiline = true;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(372, 35);
+            this.txt_Search.TabIndex = 0;
+            this.txt_Search.Text = "Nhập từ khóa...";
+            this.txt_Search.Enter += new System.EventHandler(this.txt_Search_Enter);
+            this.txt_Search.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Search_KeyUp);
+            this.txt_Search.Leave += new System.EventHandler(this.txt_Search_Leave);
             // 
             // pictureBox2
             // 
@@ -158,14 +161,14 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1427, 43);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(1068, 48);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(264, 555);
-            this.panel3.TabIndex = 2;
+            this.panel3.TabIndex = 5;
             // 
             // btn_DangBaiBao
             // 
@@ -178,7 +181,7 @@
             this.btn_DangBaiBao.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DangBaiBao.Name = "btn_DangBaiBao";
             this.btn_DangBaiBao.Size = new System.Drawing.Size(165, 37);
-            this.btn_DangBaiBao.TabIndex = 3;
+            this.btn_DangBaiBao.TabIndex = 6;
             this.btn_DangBaiBao.Text = "Đăng bài báo";
             this.btn_DangBaiBao.UseVisualStyleBackColor = false;
             this.btn_DangBaiBao.MouseLeave += new System.EventHandler(this.btn_DangBaiBao_MouseLeave);
@@ -195,7 +198,7 @@
             this.btn_KhuyenMai.Margin = new System.Windows.Forms.Padding(2);
             this.btn_KhuyenMai.Name = "btn_KhuyenMai";
             this.btn_KhuyenMai.Size = new System.Drawing.Size(165, 37);
-            this.btn_KhuyenMai.TabIndex = 3;
+            this.btn_KhuyenMai.TabIndex = 5;
             this.btn_KhuyenMai.Text = "Khuyến mãi";
             this.btn_KhuyenMai.UseVisualStyleBackColor = false;
             this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click);
@@ -213,7 +216,7 @@
             this.btn_TinMoi.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TinMoi.Name = "btn_TinMoi";
             this.btn_TinMoi.Size = new System.Drawing.Size(113, 37);
-            this.btn_TinMoi.TabIndex = 3;
+            this.btn_TinMoi.TabIndex = 4;
             this.btn_TinMoi.Text = "Tin mới";
             this.btn_TinMoi.UseVisualStyleBackColor = false;
             this.btn_TinMoi.Click += new System.EventHandler(this.btn_TinMoi_Click);
@@ -382,7 +385,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Entertain;
