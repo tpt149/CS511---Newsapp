@@ -72,7 +72,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1427, 106);
+            this.panel1.Size = new System.Drawing.Size(1385, 106);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -98,6 +98,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Ivory;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(655, 31);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -160,7 +161,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 106);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1427, 43);
+            this.panel2.Size = new System.Drawing.Size(1385, 43);
             this.panel2.TabIndex = 0;
             // 
             // panel3
@@ -177,7 +178,7 @@
             this.btn_DangBaiBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangBaiBao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangBaiBao.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_DangBaiBao.Location = new System.Drawing.Point(1205, 2);
+            this.btn_DangBaiBao.Location = new System.Drawing.Point(1176, 2);
             this.btn_DangBaiBao.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DangBaiBao.Name = "btn_DangBaiBao";
             this.btn_DangBaiBao.Size = new System.Drawing.Size(165, 37);
@@ -302,7 +303,7 @@
             this.flp_News.AutoScroll = true;
             this.flp_News.Location = new System.Drawing.Point(0, 150);
             this.flp_News.Name = "flp_News";
-            this.flp_News.Size = new System.Drawing.Size(1133, 653);
+            this.flp_News.Size = new System.Drawing.Size(1131, 653);
             this.flp_News.TabIndex = 2;
             // 
             // flp_TinXemNhieuNhat
@@ -311,24 +312,24 @@
             this.flp_TinXemNhieuNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flp_TinXemNhieuNhat.AutoScroll = true;
-            this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(1139, 402);
+            this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(1131, 402);
             this.flp_TinXemNhieuNhat.Name = "flp_TinXemNhieuNhat";
-            this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(285, 401);
+            this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(254, 401);
             this.flp_TinXemNhieuNhat.TabIndex = 3;
             // 
             // Pic_ads
             // 
             this.Pic_ads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pic_ads.Location = new System.Drawing.Point(1139, 187);
+            this.Pic_ads.Location = new System.Drawing.Point(1131, 187);
             this.Pic_ads.Name = "Pic_ads";
-            this.Pic_ads.Size = new System.Drawing.Size(285, 185);
+            this.Pic_ads.Size = new System.Drawing.Size(254, 185);
             this.Pic_ads.TabIndex = 4;
             this.Pic_ads.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1239, 171);
+            this.label2.Location = new System.Drawing.Point(1212, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 13);
             this.label2.TabIndex = 5;
@@ -337,9 +338,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1239, 386);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1204, 382);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.Size = new System.Drawing.Size(128, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tin xem nhiều nhất";
             // 
@@ -352,7 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1427, 803);
+            this.ClientSize = new System.Drawing.Size(1385, 803);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Pic_ads);

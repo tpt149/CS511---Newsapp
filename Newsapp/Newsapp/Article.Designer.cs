@@ -51,6 +51,7 @@
             this.lbl_Title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.Maroon;
             this.lbl_Title.Location = new System.Drawing.Point(-1, 257);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(273, 60);
@@ -62,6 +63,7 @@
             // 
             this.lbl_date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_date.AutoSize = true;
+            this.lbl_date.ForeColor = System.Drawing.Color.Maroon;
             this.lbl_date.Location = new System.Drawing.Point(70, 327);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(30, 13);

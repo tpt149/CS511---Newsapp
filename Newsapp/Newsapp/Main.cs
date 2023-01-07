@@ -61,9 +61,16 @@ namespace Newsapp
             table_All.Merge(Table_News_Entertain);
             #endregion
             #region Load Tin xem nhiều nhất
-            table_All.DefaultView.Sort = "View";
+            table_All = resort(table_All, "View", "desc");
             Display_high_view_News(table_All, flp_TinXemNhieuNhat);
             #endregion
+        }
+        public static DataTable resort(DataTable dt, string colName, string direction)
+        {
+            DataTable dtOut = null;
+            dt.DefaultView.Sort = colName + " " + direction;
+            dtOut = dt.DefaultView.ToTable();
+            return dtOut;
         }
         public void Display_News(DataTable dt,FlowLayoutPanel fl)
         {
@@ -85,7 +92,6 @@ namespace Newsapp
                 high_view_Article article = new high_view_Article();
                 fl.Controls.Add(article);
                 article.lbl_title.Text = dr["titles"].ToString();
-                article.lbl_time.Text = dr["Date"].ToString();
                 article.lbl_view.Text = dr["View"].ToString();
                 article.pic_hight_view_Article.ImageLocation = dr["Represent"].ToString();
                 article.pic_hight_view_Article.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -176,7 +182,7 @@ namespace Newsapp
             flp_News.Controls.Clear();
             //trộn 3 bảng sau đó sẽ xuất theo thứ tự titles trong List_Article_Sort_By_view
             // Như vậy là hiện ra tin mới
-            table_All.DefaultView.Sort = "Date";
+            table_All = resort(table_All,"Date","desc");
             #region Xuất theo thứ tự date
             Display_News(table_All, flp_News);
             #endregion
