@@ -1,6 +1,6 @@
 ﻿namespace Newsapp
 {
-    partial class Main
+    partial class Read_Article
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Read_Article));
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_DangBaiBao = new System.Windows.Forms.Button();
             this.btn_KhuyenMai = new System.Windows.Forms.Button();
             this.btn_TinMoi = new System.Windows.Forms.Button();
@@ -45,20 +43,43 @@
             this.btn_Sport = new System.Windows.Forms.Button();
             this.btn_Travel = new System.Windows.Forms.Button();
             this.btn_Home = new System.Windows.Forms.Button();
-            this.flp_News = new System.Windows.Forms.FlowLayoutPanel();
-            this.flp_TinXemNhieuNhat = new System.Windows.Forms.FlowLayoutPanel();
-            this.Pic_ads = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Pic_ads = new System.Windows.Forms.PictureBox();
+            this.flp_TinXemNhieuNhat = new System.Windows.Forms.FlowLayoutPanel();
+            this.pn_ReadSide = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(94, -2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(188, 106);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -73,7 +94,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1427, 106);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -120,27 +141,110 @@
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Nhập từ khóa...";
             // 
-            // pictureBox2
+            // btn_DangBaiBao
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(94, -2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 106);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.btn_DangBaiBao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_DangBaiBao.FlatAppearance.BorderSize = 0;
+            this.btn_DangBaiBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangBaiBao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangBaiBao.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_DangBaiBao.Location = new System.Drawing.Point(1205, 2);
+            this.btn_DangBaiBao.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DangBaiBao.Name = "btn_DangBaiBao";
+            this.btn_DangBaiBao.Size = new System.Drawing.Size(165, 37);
+            this.btn_DangBaiBao.TabIndex = 3;
+            this.btn_DangBaiBao.Text = "Đăng bài báo";
+            this.btn_DangBaiBao.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btn_KhuyenMai
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btn_KhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_KhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btn_KhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_KhuyenMai.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_KhuyenMai.Location = new System.Drawing.Point(609, 2);
+            this.btn_KhuyenMai.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_KhuyenMai.Name = "btn_KhuyenMai";
+            this.btn_KhuyenMai.Size = new System.Drawing.Size(165, 37);
+            this.btn_KhuyenMai.TabIndex = 3;
+            this.btn_KhuyenMai.Text = "Khuyến mãi";
+            this.btn_KhuyenMai.UseVisualStyleBackColor = false;
+            // 
+            // btn_TinMoi
+            // 
+            this.btn_TinMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_TinMoi.FlatAppearance.BorderSize = 0;
+            this.btn_TinMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TinMoi.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TinMoi.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_TinMoi.Location = new System.Drawing.Point(475, 2);
+            this.btn_TinMoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_TinMoi.Name = "btn_TinMoi";
+            this.btn_TinMoi.Size = new System.Drawing.Size(113, 37);
+            this.btn_TinMoi.TabIndex = 3;
+            this.btn_TinMoi.Text = "Tin mới";
+            this.btn_TinMoi.UseVisualStyleBackColor = false;
+            // 
+            // btn_Entertain
+            // 
+            this.btn_Entertain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_Entertain.FlatAppearance.BorderSize = 0;
+            this.btn_Entertain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Entertain.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Entertain.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Entertain.Location = new System.Drawing.Point(318, 3);
+            this.btn_Entertain.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Entertain.Name = "btn_Entertain";
+            this.btn_Entertain.Size = new System.Drawing.Size(153, 37);
+            this.btn_Entertain.TabIndex = 3;
+            this.btn_Entertain.Text = "Entertainment";
+            this.btn_Entertain.UseVisualStyleBackColor = false;
+            // 
+            // btn_Sport
+            // 
+            this.btn_Sport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_Sport.FlatAppearance.BorderSize = 0;
+            this.btn_Sport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sport.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sport.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Sport.Location = new System.Drawing.Point(244, -2);
+            this.btn_Sport.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Sport.Name = "btn_Sport";
+            this.btn_Sport.Size = new System.Drawing.Size(70, 43);
+            this.btn_Sport.TabIndex = 2;
+            this.btn_Sport.Text = "Sport";
+            this.btn_Sport.UseVisualStyleBackColor = false;
+            // 
+            // btn_Travel
+            // 
+            this.btn_Travel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_Travel.FlatAppearance.BorderSize = 0;
+            this.btn_Travel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Travel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Travel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Travel.Location = new System.Drawing.Point(169, -1);
+            this.btn_Travel.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Travel.Name = "btn_Travel";
+            this.btn_Travel.Size = new System.Drawing.Size(70, 43);
+            this.btn_Travel.TabIndex = 1;
+            this.btn_Travel.Text = "Travel";
+            this.btn_Travel.UseVisualStyleBackColor = false;
+            // 
+            // btn_Home
+            // 
+            this.btn_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_Home.FlatAppearance.BorderSize = 0;
+            this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Home.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Home.Location = new System.Drawing.Point(94, -2);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Home.Name = "btn_Home";
+            this.btn_Home.Size = new System.Drawing.Size(70, 43);
+            this.btn_Home.TabIndex = 0;
+            this.btn_Home.Text = "Home";
+            this.btn_Home.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -158,7 +262,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1427, 43);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
@@ -167,141 +271,33 @@
             this.panel3.Size = new System.Drawing.Size(264, 555);
             this.panel3.TabIndex = 2;
             // 
-            // btn_DangBaiBao
+            // label3
             // 
-            this.btn_DangBaiBao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_DangBaiBao.FlatAppearance.BorderSize = 0;
-            this.btn_DangBaiBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangBaiBao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DangBaiBao.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_DangBaiBao.Location = new System.Drawing.Point(1205, 2);
-            this.btn_DangBaiBao.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_DangBaiBao.Name = "btn_DangBaiBao";
-            this.btn_DangBaiBao.Size = new System.Drawing.Size(165, 37);
-            this.btn_DangBaiBao.TabIndex = 3;
-            this.btn_DangBaiBao.Text = "Đăng bài báo";
-            this.btn_DangBaiBao.UseVisualStyleBackColor = false;
-            this.btn_DangBaiBao.MouseLeave += new System.EventHandler(this.btn_DangBaiBao_MouseLeave);
-            this.btn_DangBaiBao.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_DangBaiBao_MouseMove);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1242, 382);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Tin xem nhiều nhất";
             // 
-            // btn_KhuyenMai
+            // label2
             // 
-            this.btn_KhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_KhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btn_KhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KhuyenMai.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_KhuyenMai.Location = new System.Drawing.Point(609, 2);
-            this.btn_KhuyenMai.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_KhuyenMai.Name = "btn_KhuyenMai";
-            this.btn_KhuyenMai.Size = new System.Drawing.Size(165, 37);
-            this.btn_KhuyenMai.TabIndex = 3;
-            this.btn_KhuyenMai.Text = "Khuyến mãi";
-            this.btn_KhuyenMai.UseVisualStyleBackColor = false;
-            this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click);
-            this.btn_KhuyenMai.MouseLeave += new System.EventHandler(this.btn_KhuyenMai_MouseLeave);
-            this.btn_KhuyenMai.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_KhuyenMai_MouseMove);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1242, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Hình ảnh quảng cáo";
             // 
-            // btn_TinMoi
+            // Pic_ads
             // 
-            this.btn_TinMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_TinMoi.FlatAppearance.BorderSize = 0;
-            this.btn_TinMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TinMoi.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TinMoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_TinMoi.Location = new System.Drawing.Point(475, 2);
-            this.btn_TinMoi.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_TinMoi.Name = "btn_TinMoi";
-            this.btn_TinMoi.Size = new System.Drawing.Size(113, 37);
-            this.btn_TinMoi.TabIndex = 3;
-            this.btn_TinMoi.Text = "Tin mới";
-            this.btn_TinMoi.UseVisualStyleBackColor = false;
-            this.btn_TinMoi.Click += new System.EventHandler(this.btn_TinMoi_Click);
-            // 
-            // btn_Entertain
-            // 
-            this.btn_Entertain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_Entertain.FlatAppearance.BorderSize = 0;
-            this.btn_Entertain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Entertain.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Entertain.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Entertain.Location = new System.Drawing.Point(318, 3);
-            this.btn_Entertain.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Entertain.Name = "btn_Entertain";
-            this.btn_Entertain.Size = new System.Drawing.Size(153, 37);
-            this.btn_Entertain.TabIndex = 3;
-            this.btn_Entertain.Text = "Entertainment";
-            this.btn_Entertain.UseVisualStyleBackColor = false;
-            this.btn_Entertain.Click += new System.EventHandler(this.btn_Entertain_Click);
-            this.btn_Entertain.MouseLeave += new System.EventHandler(this.btn_Entertain_MouseLeave);
-            this.btn_Entertain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Entertain_MouseMove);
-            // 
-            // btn_Sport
-            // 
-            this.btn_Sport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_Sport.FlatAppearance.BorderSize = 0;
-            this.btn_Sport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sport.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sport.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Sport.Location = new System.Drawing.Point(244, -2);
-            this.btn_Sport.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Sport.Name = "btn_Sport";
-            this.btn_Sport.Size = new System.Drawing.Size(70, 43);
-            this.btn_Sport.TabIndex = 2;
-            this.btn_Sport.Text = "Sport";
-            this.btn_Sport.UseVisualStyleBackColor = false;
-            this.btn_Sport.Click += new System.EventHandler(this.btn_Sport_Click);
-            this.btn_Sport.MouseLeave += new System.EventHandler(this.btn_Sport_MouseLeave);
-            this.btn_Sport.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Sport_MouseMove);
-            // 
-            // btn_Travel
-            // 
-            this.btn_Travel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_Travel.FlatAppearance.BorderSize = 0;
-            this.btn_Travel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Travel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Travel.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Travel.Location = new System.Drawing.Point(169, -1);
-            this.btn_Travel.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Travel.Name = "btn_Travel";
-            this.btn_Travel.Size = new System.Drawing.Size(70, 43);
-            this.btn_Travel.TabIndex = 1;
-            this.btn_Travel.Text = "Travel";
-            this.btn_Travel.UseVisualStyleBackColor = false;
-            this.btn_Travel.Click += new System.EventHandler(this.btn_Travel_Click);
-            this.btn_Travel.MouseLeave += new System.EventHandler(this.btn_Travel_MouseLeave);
-            this.btn_Travel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Travel_MouseMove);
-            // 
-            // btn_Home
-            // 
-            this.btn_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_Home.FlatAppearance.BorderSize = 0;
-            this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Home.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Home.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Home.Location = new System.Drawing.Point(94, -2);
-            this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Home.Name = "btn_Home";
-            this.btn_Home.Size = new System.Drawing.Size(70, 43);
-            this.btn_Home.TabIndex = 0;
-            this.btn_Home.Text = "Home";
-            this.btn_Home.UseVisualStyleBackColor = false;
-            this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
-            this.btn_Home.MouseLeave += new System.EventHandler(this.btn_Home_MouseLeave);
-            this.btn_Home.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Home_MouseMove);
-            // 
-            // flp_News
-            // 
-            this.flp_News.AllowDrop = true;
-            this.flp_News.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flp_News.AutoScroll = true;
-            this.flp_News.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flp_News.Location = new System.Drawing.Point(0, 150);
-            this.flp_News.Name = "flp_News";
-            this.flp_News.Size = new System.Drawing.Size(1133, 653);
-            this.flp_News.TabIndex = 2;
+            this.Pic_ads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pic_ads.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pic_ads.Location = new System.Drawing.Point(1142, 183);
+            this.Pic_ads.Name = "Pic_ads";
+            this.Pic_ads.Size = new System.Drawing.Size(285, 185);
+            this.Pic_ads.TabIndex = 7;
+            this.Pic_ads.TabStop = false;
             // 
             // flp_TinXemNhieuNhat
             // 
@@ -310,68 +306,38 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flp_TinXemNhieuNhat.AutoScroll = true;
             this.flp_TinXemNhieuNhat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(1139, 402);
+            this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(1142, 398);
             this.flp_TinXemNhieuNhat.Name = "flp_TinXemNhieuNhat";
             this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(285, 401);
-            this.flp_TinXemNhieuNhat.TabIndex = 3;
+            this.flp_TinXemNhieuNhat.TabIndex = 6;
             // 
-            // Pic_ads
+            // pn_ReadSide
             // 
-            this.Pic_ads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pic_ads.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Pic_ads.Location = new System.Drawing.Point(1139, 187);
-            this.Pic_ads.Name = "Pic_ads";
-            this.Pic_ads.Size = new System.Drawing.Size(285, 185);
-            this.Pic_ads.TabIndex = 4;
-            this.Pic_ads.TabStop = false;
+            this.pn_ReadSide.Location = new System.Drawing.Point(2, 154);
+            this.pn_ReadSide.Name = "pn_ReadSide";
+            this.pn_ReadSide.Size = new System.Drawing.Size(1134, 645);
+            this.pn_ReadSide.TabIndex = 10;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1239, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Hình ảnh quảng cáo";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1239, 386);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Tin xem nhiều nhất";
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 0;
-            this.elipseControl1.TargetControl = this.flp_TinXemNhieuNhat;
-            // 
-            // Main
+            // Read_Article
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1427, 803);
+            this.Controls.Add(this.pn_ReadSide);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Pic_ads);
             this.Controls.Add(this.flp_TinXemNhieuNhat);
-            this.Controls.Add(this.flp_News);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
-            this.Load += new System.EventHandler(this.Main_Load);
+            this.Name = "Read_Article";
+            this.Text = "Read_Article";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).EndInit();
             this.ResumeLayout(false);
@@ -381,27 +347,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_DangBaiBao;
+        private System.Windows.Forms.Button btn_KhuyenMai;
+        private System.Windows.Forms.Button btn_TinMoi;
         private System.Windows.Forms.Button btn_Entertain;
         private System.Windows.Forms.Button btn_Sport;
         private System.Windows.Forms.Button btn_Travel;
         private System.Windows.Forms.Button btn_Home;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btn_DangBaiBao;
-        private System.Windows.Forms.Button btn_KhuyenMai;
-        private System.Windows.Forms.Button btn_TinMoi;
-        private System.Windows.Forms.FlowLayoutPanel flp_News;
-        private System.Windows.Forms.FlowLayoutPanel flp_TinXemNhieuNhat;
-        private System.Windows.Forms.PictureBox Pic_ads;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private ElipseToolDemo.ElipseControl elipseControl1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox Pic_ads;
+        private System.Windows.Forms.FlowLayoutPanel flp_TinXemNhieuNhat;
+        private System.Windows.Forms.Panel pn_ReadSide;
     }
 }

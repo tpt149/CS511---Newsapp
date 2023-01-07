@@ -44,6 +44,7 @@
             this.pic_Article.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Article.TabIndex = 0;
             this.pic_Article.TabStop = false;
+            this.pic_Article.Click += new System.EventHandler(this.pic_Article_Click);
             // 
             // lbl_Title
             // 
@@ -82,6 +83,7 @@
             this.Controls.Add(this.pic_Article);
             this.Name = "Article";
             this.Size = new System.Drawing.Size(272, 361);
+            this.Load += new System.EventHandler(this.Article_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Article)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
+
 namespace Newsapp
 {
     public partial class Main : Form
     {
         string str_connect = @"Data Source=DESKTOP-JMN4VSF\SQLEXPRESS;Initial Catalog=Newsapp;Integrated Security=True";
         SqlConnection conn = null;
-        DataTable Table_News_Entertain = new DataTable();
-        DataTable Table_News_Travel = new DataTable();
-        DataTable Table_News_Sport = new DataTable();
-
+        public static DataTable Table_News_Entertain = new DataTable();
+        public static DataTable Table_News_Travel = new DataTable();
+        public static DataTable Table_News_Sport = new DataTable();
         public Main()
         {
             InitializeComponent();
         }
-
         private void Main_Load(object sender, EventArgs e)
         {
             #region Connect to database & Load film to dataTable
@@ -49,12 +49,16 @@ namespace Newsapp
             da_Sport.Dispose();
             #endregion
             #region Display News into Main UI
+            
             Display_News(Table_News_Entertain, flp_News);
             Display_News(Table_News_Sport, flp_News);
             Display_News(Table_News_Travel, flp_News);
-
             #endregion
-
+            #region Tạo List Article để phục vụ cho việc sort theo view và date
+            Add_List_Article(List_Article_Sort_By_View, Table_News_Sport);
+            Add_List_Article(List_Article_Sort_By_View, Table_News_Entertain);
+            Add_List_Article(List_Article_Sort_By_View, Table_News_Travel);
+            #endregion
         }
         public void Display_News(DataTable dt,FlowLayoutPanel fl)
         {
@@ -69,7 +73,6 @@ namespace Newsapp
                 article.pic_Article.Show();
             }
         }
-
         private void btn_Travel_Click(object sender, EventArgs e)
         {
             flp_News.Controls.Clear();
@@ -93,7 +96,6 @@ namespace Newsapp
             Display_News(Table_News_Sport, flp_News);
             Display_News(Table_News_Travel, flp_News);
         }
-
         #region MouseMove_MouseLeave
         private void btn_Home_MouseMove(object sender, MouseEventArgs e)
         {
@@ -149,5 +151,52 @@ namespace Newsapp
             btn_DangBaiBao.BackColor = Color.FromArgb(30, 40, 45);
         }
         #endregion
+        public void Add_Article(List<Paper> l, Paper f)
+        {
+            int index = 0;
+            if (l.Count == 0)
+            {
+                l.Add(f);
+                index++;
+            }
+            else
+            {
+                foreach (Paper fi in l.ToList())
+                {
+                    if (fi.title == f.title)
+                        continue;
+                    else if (fi.title != f.title && index == l.Count - 1)
+                    {
+                        l.Add(f);
+                    }
+                    index++;
+                }
+            }
+        }
+        public void Add_List_Article(List<Paper> p, DataTable dt)
+        {
+            Paper choose = new Paper();
+            foreach (DataRow dr in dt.Rows)
+            {
+                choose.title = dr["titles"].ToString();
+                choose.view = 0; // Dùng view để sắp xếp và rank theo lượt xem
+                choose.date = (DateTime)dr["Date"]; //Dùng date để sắp xếp và rank theo độ mới
+                Add_Article(p, choose);
+                choose = new Paper();
+            }
+        }
+        public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
+        private void btn_TinMoi_Click(object sender, EventArgs e)
+        {
+            List_Article_Sort_By_View.Sort((p1, p2) => p1.date.CompareTo(p2.date));
+            flp_News.Controls.Clear();
+            //trộn 3 bảng sau đó sẽ xuất theo thứ tự titles trong List_Article_Sort_By_view
+            // Như vậy là hiện ra tin mới
+        }
+
+        private void btn_KhuyenMai_Click(object sender, EventArgs e)
+        {
+            //Phải có dữ liệu về các bài báo có khuyến mãi --> thu thập thêm dữ liệu
+        }
     }
 }
