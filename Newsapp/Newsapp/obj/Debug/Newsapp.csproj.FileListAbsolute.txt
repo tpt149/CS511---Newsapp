@@ -34,3 +34,11 @@ C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.pdb
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.xml
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Mail.resources
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CopyComplete
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newtonsoft.Json.dll
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.dll
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\StarkbankEcdsa.dll
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newtonsoft.Json.xml
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.pdb
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.xml
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Mail.resources
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CopyComplete

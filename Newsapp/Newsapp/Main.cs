@@ -20,6 +20,9 @@ namespace Newsapp
         public static DataTable Table_News_Travel = new DataTable();
         public static DataTable Table_News_Sport = new DataTable();
         public static DataTable table_All = new DataTable();
+        public static DataTable table_All_Sort_By_Date = new DataTable();
+        public static DataTable table_All_Sort_By_View = new DataTable();
+
         public Main()
         {
             InitializeComponent();
@@ -60,9 +63,52 @@ namespace Newsapp
             table_All.Merge(Table_News_Sport);
             table_All.Merge(Table_News_Entertain);
             #endregion
-            #region Load Tin xem nhiều nhất
-            table_All = resort(table_All, "View", "desc");
-            Display_high_view_News(table_All, flp_TinXemNhieuNhat);
+            #region Tạo 2 bảo sort theo thời gian và theo lượt xem
+            table_All_Sort_By_View = resort(table_All, "View", "desc");// Table sort theo lượt xem
+            table_All_Sort_By_Date = resort(table_All, "Date", "desc");// Table sort theo thời gian
+                                                                       //Display_high_view_News(table_All, flp_TinXemNhieuNhat);
+            #endregion
+            #region Hiển thị 4 bài báo mới nhất
+            #region Bài báo 1
+            DataRow dr1 = table_All_Sort_By_Date.Rows[0];
+            Pic_hot_1.ImageLocation= dr1["Represent"].ToString();
+            Pic_hot_1.Show();
+            lbl_Title1.BackColor = Color.Transparent;
+            lbl_Date1.Text = dr1["Date"].ToString();
+            lbl_Title1.Text = dr1["titles"].ToString();
+
+            //lbl_Author1
+            //lbl_Category1
+            #endregion
+            #region Bài báo 2
+            DataRow dr2 = table_All_Sort_By_Date.Rows[1];
+            pic_hot_2.ImageLocation = dr2["Represent"].ToString();
+            pic_hot_2.Show();
+            lbl_Date2.Text = dr2["Date"].ToString();
+            lbl_Title2.Text = dr2["titles"].ToString();
+            //lbl_Author2
+            //lbl_Category2
+            #endregion
+            #region Bài báo 3
+            DataRow dr3 = table_All_Sort_By_Date.Rows[2];
+            pic_hot_3.ImageLocation = dr3["Represent"].ToString();
+            pic_hot_3.Show();
+            lbl_Date3.Text = dr3["Date"].ToString();
+            lbl_Title3.Text = dr3["titles"].ToString();
+            //lbl_Author3
+            //lbl_Category3
+            #endregion
+            #region Bài báo 4
+            DataRow dr4 = table_All_Sort_By_Date.Rows[3];
+            pic_hot_4.ImageLocation = dr4["Represent"].ToString();
+            pic_hot_4.Show();
+            lbl_Date4.Text = dr4["Date"].ToString();
+            lbl_Title4.Text = dr4["titles"].ToString();
+            //lbl_Author4
+            //lbl_Category4
+            #endregion
+
+
             #endregion
         }
         public static DataTable resort(DataTable dt, string colName, string direction)
@@ -239,6 +285,11 @@ namespace Newsapp
         {
             Mail m = new Mail();
             m.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
