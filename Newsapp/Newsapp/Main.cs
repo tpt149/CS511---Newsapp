@@ -229,5 +229,16 @@ namespace Newsapp
                 }
             }
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_email_Click(object sender, EventArgs e)
+        {
+            Mail m = new Mail();
+            m.Show();
+        }
     }
 }

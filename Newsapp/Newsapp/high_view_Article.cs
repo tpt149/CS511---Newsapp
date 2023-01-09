@@ -16,5 +16,20 @@ namespace Newsapp
         {
             InitializeComponent();
         }
+
+        private void lbl_title_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_view_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

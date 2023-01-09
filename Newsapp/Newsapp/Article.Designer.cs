@@ -37,10 +37,11 @@
             // 
             // pic_Article
             // 
-            this.pic_Article.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pic_Article.Dock = System.Windows.Forms.DockStyle.Left;
             this.pic_Article.Location = new System.Drawing.Point(0, 0);
+            this.pic_Article.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Article.Name = "pic_Article";
-            this.pic_Article.Size = new System.Drawing.Size(272, 254);
+            this.pic_Article.Size = new System.Drawing.Size(277, 185);
             this.pic_Article.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Article.TabIndex = 0;
             this.pic_Article.TabStop = false;
@@ -52,9 +53,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Title.Location = new System.Drawing.Point(-1, 257);
+            this.lbl_Title.Location = new System.Drawing.Point(285, 0);
+            this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(273, 60);
+            this.lbl_Title.Size = new System.Drawing.Size(195, 74);
             this.lbl_Title.TabIndex = 1;
             this.lbl_Title.Text = "Tiêu đề";
             this.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -64,9 +66,10 @@
             this.lbl_date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_date.AutoSize = true;
             this.lbl_date.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_date.Location = new System.Drawing.Point(70, 327);
+            this.lbl_date.Location = new System.Drawing.Point(287, 155);
+            this.lbl_date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(30, 13);
+            this.lbl_date.Size = new System.Drawing.Size(36, 16);
             this.lbl_date.TabIndex = 2;
             this.lbl_date.Text = "Date";
             // 
@@ -77,14 +80,15 @@
             // 
             // Article
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.Controls.Add(this.lbl_date);
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.pic_Article);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Article";
-            this.Size = new System.Drawing.Size(272, 361);
+            this.Size = new System.Drawing.Size(600, 185);
             this.Load += new System.EventHandler(this.Article_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Article)).EndInit();
             this.ResumeLayout(false);

@@ -12,7 +12,6 @@ C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.exe
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newsapp.pdb
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.AssemblyReference.cache
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.SuggestedBindingRedirects.cache
-C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Form1.resources
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Properties.Resources.resources
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.GenerateResource.cache
 C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CoreCompileInputs.cache
@@ -24,3 +23,14 @@ P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Article
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.AssemblyReference.cache
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Read_Article.resources
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.high_view_Article.resources
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Article.resources
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.high_view_Article.resources
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Read_Article.resources
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newtonsoft.Json.dll
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.dll
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\StarkbankEcdsa.dll
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\Newtonsoft.Json.xml
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.pdb
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.xml
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Mail.resources
+C:\Code\Git\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CopyComplete
