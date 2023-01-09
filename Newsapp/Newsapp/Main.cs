@@ -66,16 +66,35 @@ namespace Newsapp
             #region Tạo 2 bảo sort theo thời gian và theo lượt xem
             table_All_Sort_By_View = resort(table_All, "View", "desc");// Table sort theo lượt xem
             table_All_Sort_By_Date = resort(table_All, "Date", "desc");// Table sort theo thời gian
-                                                                       //Display_high_view_News(table_All, flp_TinXemNhieuNhat);
+            Display_high_view_News(table_All_Sort_By_View, flp_TinXemNhieuNhat);
             #endregion
             #region Hiển thị 4 bài báo mới nhất
             #region Bài báo 1
             DataRow dr1 = table_All_Sort_By_Date.Rows[0];
             Pic_hot_1.ImageLocation= dr1["Represent"].ToString();
-            Pic_hot_1.Show();
-            lbl_Title1.BackColor = Color.Transparent;
             lbl_Date1.Text = dr1["Date"].ToString();
             lbl_Title1.Text = dr1["titles"].ToString();
+            Pic_hot_1.Show();
+
+            var ar1_title = Pic_hot_1.PointToScreen(lbl_Title1.Location);
+            ar1_title = lbl_Title1.PointToClient(ar1_title);
+            lbl_Title1.Parent = Pic_hot_1;
+            lbl_Title1.Location = ar1_title;
+            lbl_Title1.BackColor = Color.Transparent;
+
+
+            var ar1_author = Pic_hot_1.PointToScreen(lbl_Author1.Location);
+            ar1_author = Pic_hot_1.PointToClient(ar1_author);
+            lbl_Author1.Parent = Pic_hot_1;
+            lbl_Author1.Location = ar1_author;
+            lbl_Author1.BackColor = Color.Transparent;
+
+            //var ar1_Date = Pic_hot_1.PointToScreen(lbl_Date1.Location);
+            //ar1_Date = Pic_hot_1.PointToClient(ar1_Date);
+            //lbl_Date1.Parent = Pic_hot_1;
+            //lbl_Date1.Location = ar1_Date;
+            //lbl_Date1.BackColor = Color.Transparent;
+
 
             //lbl_Author1
             //lbl_Category1
@@ -88,6 +107,24 @@ namespace Newsapp
             lbl_Title2.Text = dr2["titles"].ToString();
             //lbl_Author2
             //lbl_Category2
+
+            //var ar2_title = pic_hot_2.PointToScreen(lbl_Title2.Location);
+            //ar2_title = pic_hot_2.PointToClient(ar2_title);
+            //lbl_Title2.Parent = pic_hot_2;
+            //lbl_Title2.Location = ar2_title;
+            //lbl_Title2.BackColor = Color.Transparent;
+
+            //var ar2_Author = pic_hot_2.PointToScreen(lbl_author2.Location);
+            //ar2_Author = pic_hot_2.PointToClient(ar2_Author);
+            //lbl_author2.Parent = pic_hot_2;
+            //lbl_author2.Location = ar2_Author;
+            //lbl_author2.BackColor = Color.Transparent;
+
+            //var ar2_Date = pic_hot_2.PointToScreen(lbl_Date2.Location);
+            //ar2_Date = pic_hot_2.PointToClient(ar2_Date);
+            //lbl_Date2.Parent = pic_hot_2;
+            //lbl_Date2.Location = ar2_Date;
+            //lbl_Date2.BackColor = Color.Transparent;
             #endregion
             #region Bài báo 3
             DataRow dr3 = table_All_Sort_By_Date.Rows[2];
@@ -107,8 +144,6 @@ namespace Newsapp
             //lbl_Author4
             //lbl_Category4
             #endregion
-
-
             #endregion
         }
         public static DataTable resort(DataTable dt, string colName, string direction)
@@ -223,16 +258,6 @@ namespace Newsapp
         }
         #endregion
         //public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
-        private void btn_TinMoi_Click(object sender, EventArgs e)
-        {
-            flp_News.Controls.Clear();
-            //trộn 3 bảng sau đó sẽ xuất theo thứ tự titles trong List_Article_Sort_By_view
-            // Như vậy là hiện ra tin mới
-            table_All = resort(table_All,"Date","desc");
-            #region Xuất theo thứ tự date
-            Display_News(table_All, flp_News);
-            #endregion
-        }
         private void btn_KhuyenMai_Click(object sender, EventArgs e)
         {
 
@@ -261,9 +286,33 @@ namespace Newsapp
             if (e.KeyCode == Keys.Enter)
             {
                 flp_News.Controls.Clear();
-                DataRow[] filteredRows = new DataRow[table_All.Rows.Count];
-                filteredRows = table_All.Select("titles LIKE '%" + txt_Search.Text.Trim() + "%'");
-                foreach (DataRow row in filteredRows)
+                DataRow[] filteredRows_by_title = new DataRow[table_All.Rows.Count];
+                filteredRows_by_title = table_All.Select("titles LIKE '%" + txt_Search.Text.Trim() + "%'");
+                foreach (DataRow row in filteredRows_by_title)
+                {
+                    Article a = new Article();
+                    flp_News.Controls.Add(a);
+                    a.lbl_date.Text = row["Date"].ToString();
+                    a.lbl_Title.Text = row["titles"].ToString();
+                    a.pic_Article.ImageLocation = row["Represent"].ToString();
+                    a.pic_Article.SizeMode = PictureBoxSizeMode.StretchImage;
+                    a.pic_Article.Show();
+                }
+                DataRow[] filteredRows_By_description = new DataRow[table_All.Rows.Count];
+                filteredRows_By_description = table_All.Select("descriptions LIKE '%" + txt_Search.Text.Trim() + "%'");
+                foreach (DataRow row in filteredRows_By_description)
+                {
+                    Article a = new Article();
+                    flp_News.Controls.Add(a);
+                    a.lbl_date.Text = row["Date"].ToString();
+                    a.lbl_Title.Text = row["titles"].ToString();
+                    a.pic_Article.ImageLocation = row["Represent"].ToString();
+                    a.pic_Article.SizeMode = PictureBoxSizeMode.StretchImage;
+                    a.pic_Article.Show();
+                }
+                DataRow[] filteredRows_By_aritcles = new DataRow[table_All.Rows.Count];
+                filteredRows_By_aritcles = table_All.Select("articles LIKE '%" + txt_Search.Text.Trim() + "%'");
+                foreach (DataRow row in filteredRows_By_aritcles)
                 {
                     Article a = new Article();
                     flp_News.Controls.Add(a);
@@ -275,7 +324,6 @@ namespace Newsapp
                 }
             }
         }
-
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 

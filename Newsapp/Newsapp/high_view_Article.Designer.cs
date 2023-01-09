@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(high_view_Article));
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.lbl_title = new System.Windows.Forms.Label();
             this.lbl_view = new System.Windows.Forms.Label();
             this.pic_hight_view_Article = new System.Windows.Forms.PictureBox();
@@ -37,11 +36,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_hight_view_Article)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 20;
-            this.elipseControl1.TargetControl = this;
             // 
             // lbl_title
             // 
@@ -51,7 +45,7 @@
             this.lbl_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lbl_title.Location = new System.Drawing.Point(152, 3);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(145, 103);
+            this.lbl_title.Size = new System.Drawing.Size(146, 103);
             this.lbl_title.TabIndex = 1;
             this.lbl_title.Text = "Titles";
             this.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -63,7 +57,7 @@
             this.lbl_view.AutoSize = true;
             this.lbl_view.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_view.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbl_view.Location = new System.Drawing.Point(216, 126);
+            this.lbl_view.Location = new System.Drawing.Point(224, 125);
             this.lbl_view.Name = "lbl_view";
             this.lbl_view.Size = new System.Drawing.Size(35, 15);
             this.lbl_view.TabIndex = 2;
@@ -82,7 +76,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(193, 123);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(19, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +93,7 @@
             this.Controls.Add(this.lbl_view);
             this.Controls.Add(this.lbl_title);
             this.Name = "high_view_Article";
-            this.Size = new System.Drawing.Size(300, 146);
+            this.Size = new System.Drawing.Size(301, 146);
             ((System.ComponentModel.ISupportInitialize)(this.pic_hight_view_Article)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -108,8 +102,6 @@
         }
 
         #endregion
-
-        private ElipseToolDemo.ElipseControl elipseControl1;
         public System.Windows.Forms.PictureBox pic_hight_view_Article;
         public System.Windows.Forms.Label lbl_view;
         public System.Windows.Forms.Label lbl_title;

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -40,7 +41,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_DangBaiBao = new System.Windows.Forms.Button();
             this.btn_KhuyenMai = new System.Windows.Forms.Button();
-            this.btn_TinMoi = new System.Windows.Forms.Button();
             this.btn_Entertain = new System.Windows.Forms.Button();
             this.btn_Sport = new System.Windows.Forms.Button();
             this.btn_Travel = new System.Windows.Forms.Button();
@@ -72,7 +72,6 @@
             this.lbl_email = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.lbl_Title1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -100,10 +99,20 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1385, 106);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(57, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 60);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "thoats";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -118,7 +127,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(1027, 32);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +140,7 @@
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(945, 38);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(39, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,7 +153,7 @@
             this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search.ForeColor = System.Drawing.Color.Silver;
             this.txt_Search.Location = new System.Drawing.Point(578, 38);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Search.Multiline = true;
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(372, 35);
@@ -158,7 +167,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(368, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(188, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +178,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(274, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,14 +191,13 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btn_DangBaiBao);
             this.panel2.Controls.Add(this.btn_KhuyenMai);
-            this.panel2.Controls.Add(this.btn_TinMoi);
             this.panel2.Controls.Add(this.btn_Entertain);
             this.panel2.Controls.Add(this.btn_Sport);
             this.panel2.Controls.Add(this.btn_Travel);
             this.panel2.Controls.Add(this.btn_Home);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 106);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1385, 39);
             this.panel2.TabIndex = 0;
@@ -208,8 +216,8 @@
             this.btn_DangBaiBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangBaiBao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangBaiBao.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_DangBaiBao.Location = new System.Drawing.Point(1176, 2);
-            this.btn_DangBaiBao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DangBaiBao.Location = new System.Drawing.Point(1132, -1);
+            this.btn_DangBaiBao.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DangBaiBao.Name = "btn_DangBaiBao";
             this.btn_DangBaiBao.Size = new System.Drawing.Size(165, 37);
             this.btn_DangBaiBao.TabIndex = 6;
@@ -225,8 +233,8 @@
             this.btn_KhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_KhuyenMai.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_KhuyenMai.Location = new System.Drawing.Point(722, -2);
-            this.btn_KhuyenMai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_KhuyenMai.Location = new System.Drawing.Point(643, 0);
+            this.btn_KhuyenMai.Margin = new System.Windows.Forms.Padding(2);
             this.btn_KhuyenMai.Name = "btn_KhuyenMai";
             this.btn_KhuyenMai.Size = new System.Drawing.Size(123, 40);
             this.btn_KhuyenMai.TabIndex = 5;
@@ -236,22 +244,6 @@
             this.btn_KhuyenMai.MouseLeave += new System.EventHandler(this.btn_KhuyenMai_MouseLeave);
             this.btn_KhuyenMai.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_KhuyenMai_MouseMove);
             // 
-            // btn_TinMoi
-            // 
-            this.btn_TinMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_TinMoi.FlatAppearance.BorderSize = 0;
-            this.btn_TinMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TinMoi.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TinMoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_TinMoi.Location = new System.Drawing.Point(616, 0);
-            this.btn_TinMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_TinMoi.Name = "btn_TinMoi";
-            this.btn_TinMoi.Size = new System.Drawing.Size(101, 37);
-            this.btn_TinMoi.TabIndex = 4;
-            this.btn_TinMoi.Text = "Tin mới";
-            this.btn_TinMoi.UseVisualStyleBackColor = false;
-            this.btn_TinMoi.Click += new System.EventHandler(this.btn_TinMoi_Click);
-            // 
             // btn_Entertain
             // 
             this.btn_Entertain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -259,10 +251,10 @@
             this.btn_Entertain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Entertain.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Entertain.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Entertain.Location = new System.Drawing.Point(486, -2);
-            this.btn_Entertain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Entertain.Location = new System.Drawing.Point(486, 2);
+            this.btn_Entertain.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Entertain.Name = "btn_Entertain";
-            this.btn_Entertain.Size = new System.Drawing.Size(126, 40);
+            this.btn_Entertain.Size = new System.Drawing.Size(145, 36);
             this.btn_Entertain.TabIndex = 3;
             this.btn_Entertain.Text = "Entertainment";
             this.btn_Entertain.UseVisualStyleBackColor = false;
@@ -278,7 +270,7 @@
             this.btn_Sport.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sport.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Sport.Location = new System.Drawing.Point(412, -1);
-            this.btn_Sport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Sport.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Sport.Name = "btn_Sport";
             this.btn_Sport.Size = new System.Drawing.Size(70, 38);
             this.btn_Sport.TabIndex = 2;
@@ -296,7 +288,7 @@
             this.btn_Travel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Travel.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Travel.Location = new System.Drawing.Point(337, -1);
-            this.btn_Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Travel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Travel.Name = "btn_Travel";
             this.btn_Travel.Size = new System.Drawing.Size(70, 40);
             this.btn_Travel.TabIndex = 1;
@@ -314,7 +306,7 @@
             this.btn_Home.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Home.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Home.Location = new System.Drawing.Point(262, 0);
-            this.btn_Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Size = new System.Drawing.Size(70, 37);
             this.btn_Home.TabIndex = 0;
@@ -339,7 +331,7 @@
             // Pic_hot_1
             // 
             this.Pic_hot_1.Location = new System.Drawing.Point(86, 154);
-            this.Pic_hot_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic_hot_1.Margin = new System.Windows.Forms.Padding(2);
             this.Pic_hot_1.Name = "Pic_hot_1";
             this.Pic_hot_1.Size = new System.Drawing.Size(596, 289);
             this.Pic_hot_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +344,7 @@
             this.lbl_Category1.AutoSize = true;
             this.lbl_Category1.BackColor = System.Drawing.Color.Yellow;
             this.lbl_Category1.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Category1.Location = new System.Drawing.Point(98, 261);
+            this.lbl_Category1.Location = new System.Drawing.Point(110, 278);
             this.lbl_Category1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Category1.Name = "lbl_Category1";
             this.lbl_Category1.Size = new System.Drawing.Size(103, 25);
@@ -363,17 +355,16 @@
             // pic_hot_2
             // 
             this.pic_hot_2.Location = new System.Drawing.Point(686, 149);
-            this.pic_hot_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_hot_2.Margin = new System.Windows.Forms.Padding(2);
             this.pic_hot_2.Name = "pic_hot_2";
-            this.pic_hot_2.Size = new System.Drawing.Size(615, 146);
-            this.pic_hot_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_hot_2.Size = new System.Drawing.Size(630, 146);
             this.pic_hot_2.TabIndex = 14;
             this.pic_hot_2.TabStop = false;
             // 
             // pic_hot_3
             // 
             this.pic_hot_3.Location = new System.Drawing.Point(686, 300);
-            this.pic_hot_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_hot_3.Margin = new System.Windows.Forms.Padding(2);
             this.pic_hot_3.Name = "pic_hot_3";
             this.pic_hot_3.Size = new System.Drawing.Size(304, 143);
             this.pic_hot_3.TabIndex = 15;
@@ -381,16 +372,18 @@
             // 
             // pic_hot_4
             // 
-            this.pic_hot_4.Location = new System.Drawing.Point(998, 300);
-            this.pic_hot_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_hot_4.Location = new System.Drawing.Point(994, 300);
+            this.pic_hot_4.Margin = new System.Windows.Forms.Padding(2);
             this.pic_hot_4.Name = "pic_hot_4";
-            this.pic_hot_4.Size = new System.Drawing.Size(304, 138);
+            this.pic_hot_4.Size = new System.Drawing.Size(322, 143);
             this.pic_hot_4.TabIndex = 16;
             this.pic_hot_4.TabStop = false;
             // 
             // lbl_Author1
             // 
+            this.lbl_Author1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Author1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Author1.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lbl_Author1.Location = new System.Drawing.Point(111, 398);
             this.lbl_Author1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Author1.Name = "lbl_Author1";
@@ -401,17 +394,20 @@
             // 
             // lbl_Date1
             // 
+            this.lbl_Date1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Date1.Location = new System.Drawing.Point(390, 400);
+            this.lbl_Date1.ForeColor = System.Drawing.Color.FloralWhite;
+            this.lbl_Date1.Location = new System.Drawing.Point(390, 398);
             this.lbl_Date1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Date1.Name = "lbl_Date1";
-            this.lbl_Date1.Size = new System.Drawing.Size(148, 31);
+            this.lbl_Date1.Size = new System.Drawing.Size(148, 33);
             this.lbl_Date1.TabIndex = 18;
             this.lbl_Date1.Text = "Date1";
             this.lbl_Date1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Date2
             // 
+            this.lbl_Date2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Date2.Location = new System.Drawing.Point(942, 271);
             this.lbl_Date2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Date2.Name = "lbl_Date2";
@@ -421,6 +417,7 @@
             // 
             // lbl_author2
             // 
+            this.lbl_author2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_author2.Location = new System.Drawing.Point(690, 270);
             this.lbl_author2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_author2.Name = "lbl_author2";
@@ -430,21 +427,25 @@
             // 
             // lbl_Date3
             // 
+            this.lbl_Date3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Date3.Location = new System.Drawing.Point(840, 419);
             this.lbl_Date3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Date3.Name = "lbl_Date3";
             this.lbl_Date3.Size = new System.Drawing.Size(75, 19);
             this.lbl_Date3.TabIndex = 26;
             this.lbl_Date3.Text = "Ngày đăng";
+            this.lbl_Date3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Author3
             // 
+            this.lbl_Author3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Author3.Location = new System.Drawing.Point(691, 419);
             this.lbl_Author3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Author3.Name = "lbl_Author3";
             this.lbl_Author3.Size = new System.Drawing.Size(75, 19);
             this.lbl_Author3.TabIndex = 25;
             this.lbl_Author3.Text = "Tên tác giả ";
+            this.lbl_Author3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Category3
             // 
@@ -460,6 +461,7 @@
             // 
             // lbl_Title3
             // 
+            this.lbl_Title3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title3.Location = new System.Drawing.Point(692, 365);
             this.lbl_Title3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -471,25 +473,30 @@
             // 
             // lbl_Date4
             // 
+            this.lbl_Date4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Date4.Location = new System.Drawing.Point(1154, 414);
             this.lbl_Date4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Date4.Name = "lbl_Date4";
             this.lbl_Date4.Size = new System.Drawing.Size(75, 19);
             this.lbl_Date4.TabIndex = 30;
             this.lbl_Date4.Text = "Ngày đăng";
+            this.lbl_Date4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Author4
             // 
+            this.lbl_Author4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Author4.Location = new System.Drawing.Point(1003, 414);
             this.lbl_Author4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Author4.Name = "lbl_Author4";
             this.lbl_Author4.Size = new System.Drawing.Size(75, 19);
             this.lbl_Author4.TabIndex = 29;
             this.lbl_Author4.Text = "Tên tác giả ";
+            this.lbl_Author4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Category4
             // 
             this.lbl_Category4.AutoSize = true;
+            this.lbl_Category4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Category4.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Category4.Location = new System.Drawing.Point(1001, 332);
             this.lbl_Category4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -500,6 +507,7 @@
             // 
             // lbl_Title4
             // 
+            this.lbl_Title4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title4.Location = new System.Drawing.Point(1002, 365);
             this.lbl_Title4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -516,10 +524,12 @@
             // 
             // flp_TinXemNhieuNhat
             // 
+            this.flp_TinXemNhieuNhat.AllowDrop = true;
+            this.flp_TinXemNhieuNhat.AutoScroll = true;
             this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(998, 457);
-            this.flp_TinXemNhieuNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flp_TinXemNhieuNhat.Margin = new System.Windows.Forms.Padding(2);
             this.flp_TinXemNhieuNhat.Name = "flp_TinXemNhieuNhat";
-            this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(304, 303);
+            this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(334, 303);
             this.flp_TinXemNhieuNhat.TabIndex = 31;
             // 
             // lbl_Category2
@@ -536,8 +546,10 @@
             // 
             // lbl_Title2
             // 
+            this.lbl_Title2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title2.Location = new System.Drawing.Point(692, 227);
+            this.lbl_Title2.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_Title2.Location = new System.Drawing.Point(692, 221);
             this.lbl_Title2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Title2.Name = "lbl_Title2";
             this.lbl_Title2.Size = new System.Drawing.Size(605, 43);
@@ -553,10 +565,10 @@
             this.panel4.Controls.Add(this.pictureBox11);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 813);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(0, 784);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1385, 81);
+            this.panel4.Size = new System.Drawing.Size(1385, 110);
             this.panel4.TabIndex = 37;
             // 
             // label15
@@ -586,7 +598,7 @@
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(165, 43);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(26, 28);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -597,29 +609,21 @@
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(165, 10);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(26, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 7;
             this.pictureBox10.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(57, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 60);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "thoats";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lbl_Title1
             // 
+            this.lbl_Title1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_Title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title1.Location = new System.Drawing.Point(95, 311);
+            this.lbl_Title1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lbl_Title1.Location = new System.Drawing.Point(109, 309);
             this.lbl_Title1.Name = "lbl_Title1";
-            this.lbl_Title1.Size = new System.Drawing.Size(577, 67);
+            this.lbl_Title1.Size = new System.Drawing.Size(569, 78);
             this.lbl_Title1.TabIndex = 38;
             this.lbl_Title1.Text = "label2";
             this.lbl_Title1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -655,7 +659,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -696,7 +700,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_DangBaiBao;
         private System.Windows.Forms.Button btn_KhuyenMai;
-        private System.Windows.Forms.Button btn_TinMoi;
         private System.Windows.Forms.FlowLayoutPanel flp_News;
         private ElipseToolDemo.ElipseControl elipseControl1;
         private System.Windows.Forms.PictureBox Pic_hot_1;

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Read_Article));
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.flp_TinXemNhieuNhat = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,37 +43,32 @@
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Article = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.Pic_ads = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.Panel_Article.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Panel_Article.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).BeginInit();
             this.SuspendLayout();
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 0;
-            this.elipseControl1.TargetControl = this.flp_TinXemNhieuNhat;
             // 
             // flp_TinXemNhieuNhat
             // 
@@ -265,116 +259,6 @@
             this.panel1.Size = new System.Drawing.Size(1385, 106);
             this.panel1.TabIndex = 7;
             // 
-            // Panel_Article
-            // 
-            this.Panel_Article.Controls.Add(this.panel4);
-            this.Panel_Article.Controls.Add(this.button4);
-            this.Panel_Article.Controls.Add(this.button3);
-            this.Panel_Article.Controls.Add(this.button2);
-            this.Panel_Article.Controls.Add(this.button1);
-            this.Panel_Article.Controls.Add(this.label7);
-            this.Panel_Article.Controls.Add(this.label6);
-            this.Panel_Article.Controls.Add(this.label5);
-            this.Panel_Article.Controls.Add(this.label4);
-            this.Panel_Article.Location = new System.Drawing.Point(0, 150);
-            this.Panel_Article.Name = "Panel_Article";
-            this.Panel_Article.Size = new System.Drawing.Size(1131, 653);
-            this.Panel_Article.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Field";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(879, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Date";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(468, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 39);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "đây là Title";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(101, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Descriptions";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Articles";
-            // 
-            // button4
-            // 
-            this.button4.Image = global::Newsapp.Properties.Resources.comment;
-            this.button4.Location = new System.Drawing.Point(7, 369);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 69);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::Newsapp.Properties.Resources.zalo;
-            this.button3.Location = new System.Drawing.Point(6, 293);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 69);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::Newsapp.Properties.Resources.twitter;
-            this.button2.Location = new System.Drawing.Point(5, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 69);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::Newsapp.Properties.Resources.face;
-            this.button1.Location = new System.Drawing.Point(6, 137);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 69);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Pic_ads
-            // 
-            this.Pic_ads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pic_ads.Location = new System.Drawing.Point(1131, 187);
-            this.Pic_ads.Name = "Pic_ads";
-            this.Pic_ads.Size = new System.Drawing.Size(254, 185);
-            this.Pic_ads.TabIndex = 10;
-            this.Pic_ads.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -421,6 +305,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // Panel_Article
+            // 
+            this.Panel_Article.Controls.Add(this.panel4);
+            this.Panel_Article.Controls.Add(this.button4);
+            this.Panel_Article.Controls.Add(this.button3);
+            this.Panel_Article.Controls.Add(this.button2);
+            this.Panel_Article.Controls.Add(this.button1);
+            this.Panel_Article.Controls.Add(this.label7);
+            this.Panel_Article.Controls.Add(this.label6);
+            this.Panel_Article.Controls.Add(this.label5);
+            this.Panel_Article.Controls.Add(this.label4);
+            this.Panel_Article.Location = new System.Drawing.Point(0, 150);
+            this.Panel_Article.Name = "Panel_Article";
+            this.Panel_Article.Size = new System.Drawing.Size(1131, 653);
+            this.Panel_Article.TabIndex = 13;
+            // 
             // panel4
             // 
             this.panel4.AllowDrop = true;
@@ -430,6 +330,100 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1021, 468);
             this.panel4.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Articles";
+            // 
+            // button4
+            // 
+            this.button4.Image = global::Newsapp.Properties.Resources.comment;
+            this.button4.Location = new System.Drawing.Point(7, 369);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 69);
+            this.button4.TabIndex = 1;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::Newsapp.Properties.Resources.zalo;
+            this.button3.Location = new System.Drawing.Point(6, 293);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 69);
+            this.button3.TabIndex = 1;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::Newsapp.Properties.Resources.twitter;
+            this.button2.Location = new System.Drawing.Point(5, 215);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 69);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::Newsapp.Properties.Resources.face;
+            this.button1.Location = new System.Drawing.Point(6, 137);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 69);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(101, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 18);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Descriptions";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(468, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 39);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "đây là Title";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(879, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(100, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Field";
+            // 
+            // Pic_ads
+            // 
+            this.Pic_ads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pic_ads.Location = new System.Drawing.Point(1131, 187);
+            this.Pic_ads.Name = "Pic_ads";
+            this.Pic_ads.Size = new System.Drawing.Size(254, 185);
+            this.Pic_ads.TabIndex = 10;
+            this.Pic_ads.TabStop = false;
             // 
             // Read_Article
             // 
@@ -448,23 +442,21 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.Panel_Article.ResumeLayout(false);
-            this.Panel_Article.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Panel_Article.ResumeLayout(false);
+            this.Panel_Article.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private ElipseToolDemo.ElipseControl elipseControl1;
         private System.Windows.Forms.FlowLayoutPanel flp_TinXemNhieuNhat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
