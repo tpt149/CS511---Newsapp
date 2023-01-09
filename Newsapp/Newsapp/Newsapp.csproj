@@ -92,6 +92,7 @@
     <Compile Include="Read_Article.Designer.cs">
       <DependentUpon>Read_Article.cs</DependentUpon>
     </Compile>
+    <Compile Include="WeatherInfo.cs" />
     <EmbeddedResource Include="Article.resx">
       <DependentUpon>Article.cs</DependentUpon>
     </EmbeddedResource>

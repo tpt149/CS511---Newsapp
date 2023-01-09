@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Newtonsoft.Json;
+using System.Net;
 
 
 namespace Newsapp
@@ -26,7 +28,40 @@ namespace Newsapp
         public Main()
         {
             InitializeComponent();
+            comboBox1.Text = "Ha Noi";
+            getWeather();
+        }
+        string APIKey = "4e866087617d8e5d10db4ea5a0df0b54";
+        private void getWeather()
+        {
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", comboBox1.Text, APIKey);
+                var json = web.DownloadString(url);
+                WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
+                //pic_Icon.ImageLocation = "https://openweathermap.org/img/w" + Info.weather[0].icon + ".png";
+                //lab_condition.Text = Info.weather[0].main;
+                //lab_detail.Text = Info.weather[0].description;
+                //lab_sunset.Text = convertDateTime(Info.sys.sunset).ToString();
+                lab_sunrise.Text = convertDateTime(Info.sys.sunset).ToString();
+                //lab_windspeed.Text = Info.wind.speed.ToString();
+                //lab_pressure.Text = Info.main.pressure.ToString();
+                lblTemp.Text = (Info.main.temp - 273.15).ToString();
 
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getWeather();
+        }
+
+        DateTime convertDateTime(long millisec)
+        {
+            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            day = day.AddSeconds(millisec).ToLocalTime();
+
+            return day;
         }
         private void Main_Load(object sender, EventArgs e)
         {
@@ -339,5 +374,6 @@ namespace Newsapp
         {
             Application.Exit();
         }
+
     }
 }
