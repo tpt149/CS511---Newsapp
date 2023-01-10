@@ -195,7 +195,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1788, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 44);
             this.button1.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(1664, 39);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
@@ -285,7 +285,7 @@
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(1424, 59);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(352, 683);
             this.panel3.TabIndex = 5;
@@ -405,7 +405,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flp_News.AutoScroll = true;
             this.flp_News.Location = new System.Drawing.Point(115, 551);
-            this.flp_News.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flp_News.Margin = new System.Windows.Forms.Padding(4);
             this.flp_News.Name = "flp_News";
             this.flp_News.Size = new System.Drawing.Size(1205, 384);
             this.flp_News.TabIndex = 2;
