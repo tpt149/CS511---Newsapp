@@ -48,16 +48,16 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Article = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pn_article = new System.Windows.Forms.Panel();
+            this.lbl_content = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Description = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
+            this.lbl_Date = new System.Windows.Forms.Label();
+            this.lbl_Category = new System.Windows.Forms.Label();
             this.Pic_ads = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,7 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Panel_Article.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pn_article.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,16 +76,16 @@
             this.flp_TinXemNhieuNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flp_TinXemNhieuNhat.AutoScroll = true;
-            this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(1131, 402);
+            this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(1014, 402);
             this.flp_TinXemNhieuNhat.Name = "flp_TinXemNhieuNhat";
-            this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(254, 401);
+            this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(371, 401);
             this.flp_TinXemNhieuNhat.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1204, 382);
+            this.label3.Location = new System.Drawing.Point(1146, 382);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 17);
             this.label3.TabIndex = 11;
@@ -307,121 +307,119 @@
             // 
             // Panel_Article
             // 
-            this.Panel_Article.Controls.Add(this.panel4);
+            this.Panel_Article.Controls.Add(this.pn_article);
             this.Panel_Article.Controls.Add(this.button4);
             this.Panel_Article.Controls.Add(this.button3);
             this.Panel_Article.Controls.Add(this.button2);
             this.Panel_Article.Controls.Add(this.button1);
-            this.Panel_Article.Controls.Add(this.label7);
-            this.Panel_Article.Controls.Add(this.label6);
-            this.Panel_Article.Controls.Add(this.label5);
-            this.Panel_Article.Controls.Add(this.label4);
+            this.Panel_Article.Controls.Add(this.lbl_Description);
+            this.Panel_Article.Controls.Add(this.lbl_Title);
+            this.Panel_Article.Controls.Add(this.lbl_Date);
+            this.Panel_Article.Controls.Add(this.lbl_Category);
             this.Panel_Article.Location = new System.Drawing.Point(0, 150);
             this.Panel_Article.Name = "Panel_Article";
-            this.Panel_Article.Size = new System.Drawing.Size(1131, 653);
+            this.Panel_Article.Size = new System.Drawing.Size(1010, 653);
             this.Panel_Article.TabIndex = 13;
             // 
-            // panel4
+            // pn_article
             // 
-            this.panel4.AllowDrop = true;
-            this.panel4.AutoScroll = true;
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(104, 137);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1021, 468);
-            this.panel4.TabIndex = 2;
+            this.pn_article.AllowDrop = true;
+            this.pn_article.Controls.Add(this.lbl_content);
+            this.pn_article.Location = new System.Drawing.Point(230, 137);
+            this.pn_article.Name = "pn_article";
+            this.pn_article.Size = new System.Drawing.Size(778, 468);
+            this.pn_article.TabIndex = 2;
             // 
-            // label8
+            // lbl_content
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Articles";
+            this.lbl_content.Location = new System.Drawing.Point(3, 16);
+            this.lbl_content.Name = "lbl_content";
+            this.lbl_content.Size = new System.Drawing.Size(772, 186);
+            this.lbl_content.TabIndex = 0;
+            this.lbl_content.Text = "Articles";
             // 
             // button4
             // 
             this.button4.Image = global::Newsapp.Properties.Resources.comment;
-            this.button4.Location = new System.Drawing.Point(7, 369);
+            this.button4.Location = new System.Drawing.Point(58, 356);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 69);
+            this.button4.Size = new System.Drawing.Size(69, 69);
             this.button4.TabIndex = 1;
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
             this.button3.Image = global::Newsapp.Properties.Resources.zalo;
-            this.button3.Location = new System.Drawing.Point(6, 293);
+            this.button3.Location = new System.Drawing.Point(58, 252);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 69);
+            this.button3.Size = new System.Drawing.Size(69, 69);
             this.button3.TabIndex = 1;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.Image = global::Newsapp.Properties.Resources.twitter;
-            this.button2.Location = new System.Drawing.Point(5, 215);
+            this.button2.Location = new System.Drawing.Point(56, 153);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 69);
+            this.button2.Size = new System.Drawing.Size(71, 69);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.Image = global::Newsapp.Properties.Resources.face;
-            this.button1.Location = new System.Drawing.Point(6, 137);
+            this.button1.Location = new System.Drawing.Point(57, 51);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 69);
+            this.button1.Size = new System.Drawing.Size(70, 69);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // lbl_Description
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(101, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Descriptions";
+            this.lbl_Description.AutoSize = true;
+            this.lbl_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Description.Location = new System.Drawing.Point(234, 115);
+            this.lbl_Description.Name = "lbl_Description";
+            this.lbl_Description.Size = new System.Drawing.Size(91, 18);
+            this.lbl_Description.TabIndex = 0;
+            this.lbl_Description.Text = "Descriptions";
             // 
-            // label6
+            // lbl_Title
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(468, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 39);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "đây là Title";
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.Location = new System.Drawing.Point(230, 46);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(778, 65);
+            this.lbl_Title.TabIndex = 0;
+            this.lbl_Title.Text = "đây là Title";
+            this.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lbl_Date
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(879, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Date";
+            this.lbl_Date.AutoSize = true;
+            this.lbl_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Date.Location = new System.Drawing.Point(855, 14);
+            this.lbl_Date.Name = "lbl_Date";
+            this.lbl_Date.Size = new System.Drawing.Size(44, 20);
+            this.lbl_Date.TabIndex = 0;
+            this.lbl_Date.Text = "Date";
             // 
-            // label4
+            // lbl_Category
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Field";
+            this.lbl_Category.AutoSize = true;
+            this.lbl_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Category.Location = new System.Drawing.Point(233, 17);
+            this.lbl_Category.Name = "lbl_Category";
+            this.lbl_Category.Size = new System.Drawing.Size(43, 20);
+            this.lbl_Category.TabIndex = 0;
+            this.lbl_Category.Text = "Field";
             // 
             // Pic_ads
             // 
             this.Pic_ads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pic_ads.Location = new System.Drawing.Point(1131, 187);
+            this.Pic_ads.Location = new System.Drawing.Point(1014, 187);
             this.Pic_ads.Name = "Pic_ads";
-            this.Pic_ads.Size = new System.Drawing.Size(254, 185);
+            this.Pic_ads.Size = new System.Drawing.Size(371, 185);
             this.Pic_ads.TabIndex = 10;
             this.Pic_ads.TabStop = false;
             // 
@@ -438,7 +436,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Read_Article";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Read_Article";
+            this.Load += new System.EventHandler(this.Read_Article_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -448,8 +448,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Panel_Article.ResumeLayout(false);
             this.Panel_Article.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pn_article.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_ads)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -481,11 +480,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lbl_content;
+        private System.Windows.Forms.Label lbl_Description;
+        private System.Windows.Forms.Label lbl_Title;
+        private System.Windows.Forms.Label lbl_Date;
+        private System.Windows.Forms.Label lbl_Category;
+        private System.Windows.Forms.Panel pn_article;
     }
 }

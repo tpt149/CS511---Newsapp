@@ -66,7 +66,7 @@
             this.lbl_date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_date.AutoSize = true;
             this.lbl_date.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_date.Location = new System.Drawing.Point(301, 182);
+            this.lbl_date.Location = new System.Drawing.Point(230, 182);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(30, 13);
             this.lbl_date.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.lbl_Category.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Category.AutoSize = true;
             this.lbl_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Category.Location = new System.Drawing.Point(246, 18);
+            this.lbl_Category.Location = new System.Drawing.Point(216, 22);
             this.lbl_Category.Name = "lbl_Category";
             this.lbl_Category.Size = new System.Drawing.Size(68, 18);
             this.lbl_Category.TabIndex = 4;
@@ -123,8 +123,8 @@
         public System.Windows.Forms.PictureBox pic_Article;
         public System.Windows.Forms.Label lbl_Title;
         public System.Windows.Forms.Label lbl_date;
-        private System.Windows.Forms.Label lbl_Category;
         private System.Windows.Forms.Label lbl_Author;
         private ElipseToolDemo.ElipseControl elipseControl1;
+        public System.Windows.Forms.Label lbl_Category;
     }
 }

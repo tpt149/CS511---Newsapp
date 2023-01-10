@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,13 +13,35 @@ namespace Newsapp
 {
     public partial class Article : UserControl
     {
+
         public Article()
         {
             InitializeComponent();
         }
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+    (
+        int nLeftRect, // x-coordinate of upper-left corner
+        int nTopRect, // y-coordinate of upper-left corner
+        int nRightRect, // x-coordinate of lower-right corner
+        int nBottomRect, // y-coordinate of lower-right corner
+        int nWidthEllipse, // height of ellipse
+        int nHeightEllipse // width of ellipse
+    );
+
+        public static System.Drawing.Region GetRoundedRegion(int controlWidth, int controlHeight)
+        {
+            return System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, controlWidth - 5, controlHeight - 5, 20, 20));
+        }
+
+
+
+        public static Paper choosen = new Paper();
         private void pic_Article_Click(object sender, EventArgs e)
         {
-
+            choosen.title = lbl_Title.Text;
+            Read_Article read_Article = new Read_Article();
+            read_Article.ShowDialog();
 
         }
         public void Add_Article(List<Paper> l, Paper f)
@@ -60,7 +83,7 @@ namespace Newsapp
 
         private void Article_Load(object sender, EventArgs e)
         {
-
+            GetRoundedRegion(435, 201);
         }
     }
 }

@@ -50,12 +50,10 @@ namespace Newsapp
 
             }
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             getWeather();
         }
-
         DateTime convertDateTime(long millisec)
         {
             DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
@@ -107,32 +105,39 @@ namespace Newsapp
             #region Bài báo 1
             DataRow dr1 = table_All_Sort_By_Date.Rows[0];
             Pic_hot_1.ImageLocation= dr1["Represent"].ToString();
+            Pic_hot_1.Show();
             lbl_Date1.Text = dr1["Date"].ToString();
             lbl_Title1.Text = dr1["titles"].ToString();
-            Pic_hot_1.Show();
+            lbl_Author1.Text=dr1["Author"].ToString();
+            lbl_Category1.Text = dr1["Category"].ToString();
 
-            var ar1_title = Pic_hot_1.PointToScreen(lbl_Title1.Location);
-            ar1_title = lbl_Title1.PointToClient(ar1_title);
-            lbl_Title1.Parent = Pic_hot_1;
-            lbl_Title1.Location = ar1_title;
-            lbl_Title1.BackColor = Color.Transparent;
+            #region Đổi màu category
+            if (lbl_Category1.Text == "Travel")
+            {
+                lbl_Category1.BackColor = Color.Green;
+                lbl_Category1.ForeColor = Color.Yellow;
+
+            }
+            else if (lbl_Category1.Text == "Entertain")
+            {
+                lbl_Category1.BackColor = Color.Orange;
+                lbl_Category1.ForeColor = Color.YellowGreen;
+
+            }
+            else
+            {
+                lbl_Category1.BackColor = Color.Yellow;
+                lbl_Category1.ForeColor = Color.DarkRed;
+            }
+            #endregion
+
+            //var ar1_title = Pic_hot_1.PointToScreen(lbl_Title1.Location);
+            //ar1_title = Pic_hot_1.PointToClient(ar1_title);
+            //lbl_Title1.Parent = Pic_hot_1;
+            //lbl_Title1.Location = ar1_title;
+            //lbl_Title1.BackColor = Color.Transparent;
 
 
-            var ar1_author = Pic_hot_1.PointToScreen(lbl_Author1.Location);
-            ar1_author = Pic_hot_1.PointToClient(ar1_author);
-            lbl_Author1.Parent = Pic_hot_1;
-            lbl_Author1.Location = ar1_author;
-            lbl_Author1.BackColor = Color.Transparent;
-
-            //var ar1_Date = Pic_hot_1.PointToScreen(lbl_Date1.Location);
-            //ar1_Date = Pic_hot_1.PointToClient(ar1_Date);
-            //lbl_Date1.Parent = Pic_hot_1;
-            //lbl_Date1.Location = ar1_Date;
-            //lbl_Date1.BackColor = Color.Transparent;
-
-
-            //lbl_Author1
-            //lbl_Category1
             #endregion
             #region Bài báo 2
             DataRow dr2 = table_All_Sort_By_Date.Rows[1];
@@ -140,26 +145,28 @@ namespace Newsapp
             pic_hot_2.Show();
             lbl_Date2.Text = dr2["Date"].ToString();
             lbl_Title2.Text = dr2["titles"].ToString();
-            //lbl_Author2
-            //lbl_Category2
+            lbl_Category2.Text = dr2["Category"].ToString();
+            lbl_author2.Text=dr2["Author"].ToString();
+            #region Đổi màu category
+            if (lbl_Category2.Text == "Travel")
+            {
+                lbl_Category2.BackColor = Color.Green;
+                lbl_Category2.ForeColor = Color.Yellow;
 
-            //var ar2_title = pic_hot_2.PointToScreen(lbl_Title2.Location);
-            //ar2_title = pic_hot_2.PointToClient(ar2_title);
-            //lbl_Title2.Parent = pic_hot_2;
-            //lbl_Title2.Location = ar2_title;
-            //lbl_Title2.BackColor = Color.Transparent;
+            }
+            else if (lbl_Category2.Text == "Entertain")
+            {
+                lbl_Category2.BackColor = Color.Orange;
+                lbl_Category2.ForeColor = Color.YellowGreen;
 
-            //var ar2_Author = pic_hot_2.PointToScreen(lbl_author2.Location);
-            //ar2_Author = pic_hot_2.PointToClient(ar2_Author);
-            //lbl_author2.Parent = pic_hot_2;
-            //lbl_author2.Location = ar2_Author;
-            //lbl_author2.BackColor = Color.Transparent;
+            }
+            else
+            {
+                lbl_Category2.BackColor = Color.Yellow;
+                lbl_Category2.ForeColor = Color.DarkRed;
+            }
+            #endregion
 
-            //var ar2_Date = pic_hot_2.PointToScreen(lbl_Date2.Location);
-            //ar2_Date = pic_hot_2.PointToClient(ar2_Date);
-            //lbl_Date2.Parent = pic_hot_2;
-            //lbl_Date2.Location = ar2_Date;
-            //lbl_Date2.BackColor = Color.Transparent;
             #endregion
             #region Bài báo 3
             DataRow dr3 = table_All_Sort_By_Date.Rows[2];
@@ -167,8 +174,31 @@ namespace Newsapp
             pic_hot_3.Show();
             lbl_Date3.Text = dr3["Date"].ToString();
             lbl_Title3.Text = dr3["titles"].ToString();
-            //lbl_Author3
-            //lbl_Category3
+            lbl_Author3.Text = dr3["Author"].ToString();    
+            lbl_Category3.Text=dr3["Category"].ToString();
+            #region Đổi màu category
+            if (lbl_Category3.Text == "Travel")
+            {
+                lbl_Category3.BackColor = Color.Green;
+                lbl_Category3.ForeColor = Color.Yellow;
+
+            }
+            else if (lbl_Category3.Text == "Entertain")
+            {
+                lbl_Category3.BackColor = Color.Orange;
+                lbl_Category3.ForeColor = Color.YellowGreen;
+
+            }
+            else
+            {
+                lbl_Category3.BackColor = Color.Yellow;
+                lbl_Category3.ForeColor = Color.DarkRed;
+            }
+            #endregion
+
+
+
+
             #endregion
             #region Bài báo 4
             DataRow dr4 = table_All_Sort_By_Date.Rows[3];
@@ -176,8 +206,27 @@ namespace Newsapp
             pic_hot_4.Show();
             lbl_Date4.Text = dr4["Date"].ToString();
             lbl_Title4.Text = dr4["titles"].ToString();
-            //lbl_Author4
-            //lbl_Category4
+            lbl_Author4.Text = dr4["Author"].ToString();
+            lbl_Category4.Text = dr4["Category"].ToString();
+            #region Đổi màu category
+            if (lbl_Category4.Text == "Travel")
+            {
+                lbl_Category4.BackColor = Color.Green;
+                lbl_Category4.ForeColor = Color.Yellow;
+
+            }
+            else if (lbl_Category4.Text == "Entertain")
+            {
+                lbl_Category4.BackColor = Color.Orange;
+                lbl_Category4.ForeColor = Color.YellowGreen;
+
+            }
+            else
+            {
+                lbl_Category4.BackColor = Color.Yellow;
+                lbl_Category4.ForeColor = Color.DarkRed;
+            }
+            #endregion
             #endregion
             #endregion
         }
@@ -194,6 +243,7 @@ namespace Newsapp
             {
                 Article article = new Article();
                 fl.Controls.Add(article);
+                article.lbl_Category.Text = "Thể loại: " + dr["Category"].ToString();
                 article.lbl_Title.Text = dr["titles"].ToString();
                 article.lbl_date.Text = dr["Date"].ToString();
                 article.pic_Article.ImageLocation = dr["Represent"].ToString();
@@ -315,7 +365,6 @@ namespace Newsapp
                 txt_Search.ForeColor = Color.Silver;
             }
         }
-
         private void txt_Search_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -374,6 +423,7 @@ namespace Newsapp
         {
             Application.Exit();
         }
+
 
     }
 }
