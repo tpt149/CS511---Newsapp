@@ -139,7 +139,6 @@
             this.lblTemp.Size = new System.Drawing.Size(43, 25);
             this.lblTemp.TabIndex = 11;
             this.lblTemp.Text = "20";
-            this.lblTemp.TextChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -191,6 +190,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 9;
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
