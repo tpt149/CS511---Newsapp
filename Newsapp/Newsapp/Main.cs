@@ -16,7 +16,7 @@ namespace Newsapp
 {
     public partial class Main : Form
     {
-        string str_connect = @"Data Source=DESKTOP-JMN4VSF\SQLEXPRESS;Initial Catalog=Newsapp;Integrated Security=True";
+        string str_connect = @"Data Source=DESKTOP-JMN4VSF\SQLEXPRESS;Initial Catalog=NewsappC#;Integrated Security=True";
         SqlConnection conn = null;
         public static DataTable Table_News_Entertain = new DataTable();
         public static DataTable Table_News_Travel = new DataTable();
@@ -334,12 +334,12 @@ namespace Newsapp
         }
         private void btn_DangBaiBao_MouseMove(object sender, MouseEventArgs e)
         {
-            btn_DangBaiBao.BackColor = Color.YellowGreen;
+            //btn_DangBaiBao.BackColor = Color.YellowGreen;
 
         }
         private void btn_DangBaiBao_MouseLeave(object sender, EventArgs e)
         {
-            btn_DangBaiBao.BackColor = Color.FromArgb(30, 40, 45);
+            //btn_DangBaiBao.BackColor = Color.FromArgb(30, 40, 45);
         }
         #endregion
         //public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
