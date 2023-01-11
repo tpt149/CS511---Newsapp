@@ -39,14 +39,9 @@ namespace Newsapp
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", comboBox1.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
-                //pic_Icon.ImageLocation = "https://openweathermap.org/img/w" + Info.weather[0].icon + ".png";
-                //lab_condition.Text = Info.weather[0].main;
-                //lab_detail.Text = Info.weather[0].description;
-                //lab_sunset.Text = convertDateTime(Info.sys.sunset).ToString();
+                pic_Icon.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
                 lab_sunrise.Text = convertDateTime(Info.sys.sunset).ToString();
-                //lab_windspeed.Text = Info.wind.speed.ToString();
-                //lab_pressure.Text = Info.main.pressure.ToString();
-                lblTemp.Text = (Info.main.temp - 273.15).ToString();
+                lblTemp.Text = (Info.main.temp - 273.15).ToString() + "°C";
 
             }
         }
@@ -56,7 +51,7 @@ namespace Newsapp
         }
         DateTime convertDateTime(long millisec)
         {
-            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
             day = day.AddSeconds(millisec).ToLocalTime();
 
             return day;
@@ -133,10 +128,33 @@ namespace Newsapp
 
             //var ar1_title = Pic_hot_1.PointToScreen(lbl_Title1.Location);
             //ar1_title = Pic_hot_1.PointToClient(ar1_title);
-            //lbl_Title1.Parent = Pic_hot_1;
-            //lbl_Title1.Location = ar1_title;
-            //lbl_Title1.BackColor = Color.Transparent;
+            lbl_Title1.Parent = Pic_hot_1;
+            lbl_Title1.BackColor = Color.Transparent;
+            lbl_Author1.Parent = Pic_hot_1;
+            lbl_Author1.BackColor = Color.Transparent;
+            lbl_Date1.Parent = Pic_hot_1;
+            lbl_Date1.BackColor = Color.Transparent;
 
+            lbl_Title2.Parent = pic_hot_2;
+            lbl_Title2.BackColor = Color.Transparent;
+            lbl_author2.Parent = pic_hot_2;
+            lbl_author2.BackColor = Color.Transparent;
+            lbl_Date2.Parent = pic_hot_2;
+            lbl_Date2.BackColor = Color.Transparent;
+
+            lbl_Title3.Parent = pic_hot_3;
+            lbl_Title3.BackColor = Color.Transparent;
+            lbl_Author3.Parent = pic_hot_3;
+            lbl_Author3.BackColor = Color.Transparent;
+            lbl_Date3.Parent = pic_hot_3;
+            lbl_Date3.BackColor = Color.Transparent;
+
+            lbl_Title4.Parent = pic_hot_4;
+            lbl_Title4.BackColor = Color.Transparent;
+            lbl_Author4.Parent = pic_hot_4;
+            lbl_Author4.BackColor = Color.Transparent;
+            lbl_Date4.Parent = pic_hot_4;
+            lbl_Date4.BackColor = Color.Transparent;
 
             #endregion
             #region Bài báo 2

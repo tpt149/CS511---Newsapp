@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,8 +17,35 @@ namespace Newsapp
         public Read_Article()
         {
             InitializeComponent();
+            comboBox1.Text = "Ha Noi";
+            getWeather();
         }
 
+        string APIKey = "4e866087617d8e5d10db4ea5a0df0b54";
+        private void getWeather()
+        {
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", comboBox1.Text, APIKey);
+                var json = web.DownloadString(url);
+                WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
+                pic_Icon.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
+                lab_sunrise.Text = convertDateTime(Info.sys.sunset).ToString();
+                lblTemp.Text = (Info.main.temp - 273.15).ToString() + "°C";
+
+            }
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getWeather();
+        }
+        DateTime convertDateTime(long millisec)
+        {
+            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
+            day = day.AddSeconds(millisec).ToLocalTime();
+
+            return day;
+        }
         private void Read_Article_Load(object sender, EventArgs e)
         {
             foreach(DataRow dr in Main.table_All.Rows)
