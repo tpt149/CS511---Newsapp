@@ -133,11 +133,31 @@ namespace Newsapp
             Send.Click += Add_user_comment;
 
             #endregion
+
+
+            #region Load comment cũ
+            foreach (DataRow dr in Main.Table_Comment_stored.Rows)
+            {
+                if (dr["titles"].ToString() == lbl_Title.Text)
+                {
+                    user_comment user = new user_comment();
+                    Panel_Article.Controls.Add(user);
+                    user.lbl_content.Text = dr["content"].ToString();
+                    user.lbl_UserID.Text = dr["UserID"].ToString();
+
+                    user.Size = new Size(750, 90);
+                    user.Location = new Point(Location_X, Location_Y);
+
+                    Location_Y += 100;
+                }
+            }
+
+            #endregion
         }
         RichTextBox comment = new RichTextBox();
         int Location_Y = 700;
         int Location_X = 92;
-        DataTable Comment_Stored = new DataTable();
+
         private void Add_user_comment(object sender, EventArgs e)
         {
             Random rd = new Random();
@@ -152,6 +172,15 @@ namespace Newsapp
 
             comment.Text = "";
             Location_Y += 100;
+
+
+            #region Lưu comment 
+            DataRow r = Main.Table_Comment_stored.NewRow();
+            r["titles"] = lbl_Title.Text;
+            r["UserID"] = user.lbl_UserID.Text;
+            r["content"] = user.lbl_content.Text;
+            Main.Table_Comment_stored.Rows.Add(r);
+            #endregion
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -172,7 +201,7 @@ namespace Newsapp
             {
                 imageNumber = 1;
             }
-            Pic_ads.ImageLocation = string.Format("C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\{0}.jpg", imageNumber);
+            Pic_ads.ImageLocation = string.Format("P:\\CS511\\Final_Project\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\{0}.jpg", imageNumber);
             imageNumber++;
         }
 
@@ -183,26 +212,31 @@ namespace Newsapp
 
         private void slidePic_Click(object sender, EventArgs e)
         {
-            if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\1.jpg")
+            if (Pic_ads.ImageLocation == "P:\\CS511\\Final_Project\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\1.jpg")
             {
                 System.Diagnostics.Process.Start("https://sapuwa.com/?gclid=EAIaIQobChMIqOjnj--q_AIVnL2WCh00ZAAWEAAYASAAEgIMqPD_BwE&gidzl=Xh9qHuAi0Ks4hN90XR07I8AeSa6QlmaRoVOg59teK4wUz2SKaBW06vMb9qQHl5DBngPqHpWsBq8xWQa1Jm");
             }
-            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\2.jpg")
+            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\2.jpg")
             {
                 System.Diagnostics.Process.Start("https://benhvienanviet.com/vi/tham-kham-mien-phi-giam-chi-phi-dieu-tri-tai-benh-vien-an-viet-n1232");
             }
-            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\3.jpg")
+            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\3.jpg")
             {
                 System.Diagnostics.Process.Start("https://rosamiahotel.com/");
             }
-            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\4.jpg")
+            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\4.jpg")
             {
                 System.Diagnostics.Process.Start("https://www.vinamilk.com.vn/vi");
             }
-            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\5.jpg")
+            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\5.jpg")
             {
                 System.Diagnostics.Process.Start("https://www.sabeco.com.vn/truyen-thong/tin-tuc-su-kien/huyen-thoai-bia-saigon-special-tai-xuat");
             }
+        }
+
+        private void Pic_ads_Click(object sender, EventArgs e)
+        {
+            slidePic_Click(sender, e);
         }
     }
 }

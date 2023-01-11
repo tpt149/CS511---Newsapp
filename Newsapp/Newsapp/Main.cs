@@ -24,12 +24,15 @@ namespace Newsapp
         public static DataTable table_All = new DataTable();
         public static DataTable table_All_Sort_By_Date = new DataTable();
         public static DataTable table_All_Sort_By_View = new DataTable();
-
+        public static DataTable Table_Comment_stored = new DataTable();
         public Main()
         {
             InitializeComponent();
             comboBox1.Text = "Ha Noi";
             getWeather();
+            Table_Comment_stored.Columns.Add("UserID");
+            Table_Comment_stored.Columns.Add("content");
+            Table_Comment_stored.Columns.Add("titles");
         }
         string APIKey = "4e866087617d8e5d10db4ea5a0df0b54";
         private void getWeather()
