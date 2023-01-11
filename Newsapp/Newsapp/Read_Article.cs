@@ -161,33 +161,48 @@ namespace Newsapp
 
         private void btn_Share_by_Gmail_Click(object sender, EventArgs e)
         {
-        //    string from, pass, content;
-        //    from = txtSender.Text.Trim();
-        //    pass = txtPass.Text.Trim();
-        //    content = txtContent.Text;
+            string link = "abc";
+            Share s = new Share(link);  // truyền vô string link 
+            s.Show();
+        }
+        private int imageNumber = 1;
+        private void LoadNextImage()
+        {
+            if (imageNumber == 6)
+            {
+                imageNumber = 1;
+            }
+            Pic_ads.ImageLocation = string.Format("C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\{0}.jpg", imageNumber);
+            imageNumber++;
+        }
 
-        //    MailMessage message = new MailMessage();
-        //    message.From = new MailAddress(from);
-        //    message.Subject = "Newsapp C#";
-        //    message.To.Add(new MailAddress("newsapp1201@gmail.com"));
-        //    message.Body = "<html><body>" + content + " </body></html>";
-        //    message.IsBodyHtml = true;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LoadNextImage();
+        }
 
-        //    var smtpClient = new SmtpClient("smtp.gmail.com")
-        //    {
-        //        Port = 587,
-        //        Credentials = new NetworkCredential(from, pass),
-        //        EnableSsl = true,
-        //    };
-        //    try
-        //    {
-        //        smtpClient.Send(message);
-        //        MessageBox.Show("Mail sent successfully.", "Email.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
+        private void slidePic_Click(object sender, EventArgs e)
+        {
+            if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\1.jpg")
+            {
+                System.Diagnostics.Process.Start("https://sapuwa.com/?gclid=EAIaIQobChMIqOjnj--q_AIVnL2WCh00ZAAWEAAYASAAEgIMqPD_BwE&gidzl=Xh9qHuAi0Ks4hN90XR07I8AeSa6QlmaRoVOg59teK4wUz2SKaBW06vMb9qQHl5DBngPqHpWsBq8xWQa1Jm");
+            }
+            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\2.jpg")
+            {
+                System.Diagnostics.Process.Start("https://benhvienanviet.com/vi/tham-kham-mien-phi-giam-chi-phi-dieu-tri-tai-benh-vien-an-viet-n1232");
+            }
+            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\3.jpg")
+            {
+                System.Diagnostics.Process.Start("https://rosamiahotel.com/");
+            }
+            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\4.jpg")
+            {
+                System.Diagnostics.Process.Start("https://www.vinamilk.com.vn/vi");
+            }
+            else if (Pic_ads.ImageLocation == "C:\\Code\\Git\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\5.jpg")
+            {
+                System.Diagnostics.Process.Start("https://www.sabeco.com.vn/truyen-thong/tin-tuc-su-kien/huyen-thoai-bia-saigon-special-tai-xuat");
+            }
         }
     }
 }

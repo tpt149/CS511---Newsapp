@@ -62,6 +62,7 @@
     <Compile Include="Article.Designer.cs">
       <DependentUpon>Article.cs</DependentUpon>
     </Compile>
+    <Compile Include="Emoji.cs" />
     <Compile Include="high_view_Article.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="Read_Article.Designer.cs">
       <DependentUpon>Read_Article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share.Designer.cs">
+      <DependentUpon>Share.cs</DependentUpon>
     </Compile>
     <Compile Include="user_comment.cs">
       <SubType>UserControl</SubType>
@@ -121,6 +128,9 @@
     <EmbeddedResource Include="Read_Article.resx">
       <DependentUpon>Read_Article.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Share.resx">
+      <DependentUpon>Share.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_comment.resx">
       <DependentUpon>user_comment.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +149,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\Ads\1.jpg" />
+    <Content Include="Image\Ads\2.jpg" />
+    <Content Include="Image\Ads\3.jpg" />
+    <Content Include="Image\Ads\4.jpg" />
+    <Content Include="Image\Ads\5.jpg" />
     <Content Include="Image\Entertain\10.jpg" />
     <Content Include="Image\Entertain\11.jpg" />
     <Content Include="Image\Entertain\12.jpg" />
@@ -233,5 +248,6 @@
     <Content Include="Image\Travel\9.jpg" />
     <None Include="Resources\user.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

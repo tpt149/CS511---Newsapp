@@ -4,26 +4,43 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.Net.Mail;
 
 namespace Newsapp
 {
-    public partial class Mail : Form
+    public partial class Share : Form
     {
-        public Mail()
+        public Share(string link)
         {
             InitializeComponent();
             fpl_Emoji.Visible = false;
+            txtContent.Text = link + "\n";
         }
+        bool a = false;
+        private void btn_emoji_Click(object sender, EventArgs e)
+        {
+            if (a == false)
+            {
+                fpl_Emoji.Visible = true;
+                a = true;
+            }
+            else
+            {
+                fpl_Emoji.Visible = false;
+                a = false;
+            }
+        }
+
         string from;
         string pass;
         string content;
         string subject;
-        private void btnSend_Click(object sender, EventArgs e)
+
+        private void btn_send_Click(object sender, EventArgs e)
         {
             from = txtSender.Text.Trim();
             pass = txtPass.Text.Trim();
@@ -52,20 +69,8 @@ namespace Newsapp
                 MessageBox.Show(ex.Message, "Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        bool a = false;
-        private void btn_emoji_Click(object sender, EventArgs e)
-        {
-            if (a == false)
-            {
-                fpl_Emoji.Visible = true;
-                a = true;
-            }
-            else
-            {
-                fpl_Emoji.Visible = false;
-                a = false;
-            }
-        }
+
+
         private void ptb_Kiss_Click(object sender, EventArgs e)
         {
             txtContent.Text = txtContent.Text.Trim() + Emoji.Kissing_Heart;
