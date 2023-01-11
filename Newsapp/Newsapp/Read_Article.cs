@@ -45,9 +45,9 @@ namespace Newsapp
                     lbl_articles2.Text = dr["articles2"].ToString();
                     lbl_articles2.Location = new Point(1,50 +  lbl_articles1.Size.Height + lbl_pic_des.Size.Height + Article_image.Size.Height);
 
-
+                    //pn_article.Controls.Add(lbl_author);
                     lbl_author.Text = dr["Author"].ToString();
-                    lbl_author.Location = new Point(730,30 + lbl_articles2.Size.Height + lbl_articles1.Size.Height + lbl_pic_des.Size.Height + Article_image.Size.Height);
+                    lbl_author.Location = new Point(730, 50 +  lbl_articles2.Size.Height + lbl_articles1.Size.Height + lbl_pic_des.Size.Height + Article_image.Size.Height);
                 }
             }
             #region Load những tin liên quan
@@ -92,8 +92,20 @@ namespace Newsapp
             comment.Size = new Size(845,70);
             comment.Location = new Point(92,715);
             
+
+
+            Panel comment_stored = new Panel();
+            Panel_Article.Controls.Add(comment_stored);
+            comment_stored.Size = new Size(850,300);
+            comment_stored.AutoScroll = true;
+            comment_stored.Location = new Point(92, 780);
+
+         
+            //comment.KeyDown += EventKeyDownComment(comment, Panel_Article);
             #endregion
         }
+
+
 
         private void btn_back_Click(object sender, EventArgs e)
         {

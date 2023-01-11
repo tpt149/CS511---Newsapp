@@ -92,6 +92,12 @@
     <Compile Include="Read_Article.Designer.cs">
       <DependentUpon>Read_Article.cs</DependentUpon>
     </Compile>
+    <Compile Include="user_comment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_comment.Designer.cs">
+      <DependentUpon>user_comment.cs</DependentUpon>
+    </Compile>
     <Compile Include="WeatherInfo.cs" />
     <EmbeddedResource Include="Article.resx">
       <DependentUpon>Article.cs</DependentUpon>
@@ -113,9 +119,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Read_Article.resx">
       <DependentUpon>Read_Article.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_comment.resx">
+      <DependentUpon>user_comment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -224,6 +234,7 @@
     <Content Include="Image\Travel\7.jpg" />
     <Content Include="Image\Travel\8.jpg" />
     <Content Include="Image\Travel\9.jpg" />
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

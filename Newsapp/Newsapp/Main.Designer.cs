@@ -403,6 +403,7 @@
             this.pic_hot_2.Size = new System.Drawing.Size(630, 146);
             this.pic_hot_2.TabIndex = 14;
             this.pic_hot_2.TabStop = false;
+            this.pic_hot_2.Click += new System.EventHandler(this.pic_hot_2_Click);
             // 
             // pic_hot_3
             // 
@@ -412,6 +413,7 @@
             this.pic_hot_3.Size = new System.Drawing.Size(304, 143);
             this.pic_hot_3.TabIndex = 15;
             this.pic_hot_3.TabStop = false;
+            this.pic_hot_3.Click += new System.EventHandler(this.pic_hot_3_Click);
             // 
             // pic_hot_4
             // 
@@ -421,6 +423,7 @@
             this.pic_hot_4.Size = new System.Drawing.Size(322, 143);
             this.pic_hot_4.TabIndex = 16;
             this.pic_hot_4.TabStop = false;
+            this.pic_hot_4.Click += new System.EventHandler(this.pic_hot_4_Click);
             // 
             // lbl_Author1
             // 

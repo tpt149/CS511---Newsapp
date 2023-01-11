@@ -42,3 +42,4 @@ P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.pdb
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\bin\Debug\SendGrid.xml
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.Mail.resources
 P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.csproj.CopyComplete
+P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\obj\Debug\Newsapp.user_comment.resources

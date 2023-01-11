@@ -402,7 +402,10 @@ namespace Newsapp
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            Article.choosen.title = lbl_Title1.Text;
+            Article.choosen.Category = lbl_Category1.Text;
+            Read_Article read_Article = new Read_Article();
+            read_Article.ShowDialog();
         }
 
         private void lbl_email_Click(object sender, EventArgs e)
@@ -416,6 +419,28 @@ namespace Newsapp
             Application.Exit();
         }
 
+        private void pic_hot_2_Click(object sender, EventArgs e)
+        {
+            Article.choosen.title = lbl_Title2.Text;
+            Article.choosen.Category = lbl_Category2.Text;
+            Read_Article read_Article = new Read_Article();
+            read_Article.ShowDialog();
+        }
 
+        private void pic_hot_3_Click(object sender, EventArgs e)
+        {
+            Article.choosen.title = lbl_Title3.Text;
+            Article.choosen.Category = lbl_Category3.Text;
+            Read_Article read_Article = new Read_Article();
+            read_Article.ShowDialog();
+        }
+
+        private void pic_hot_4_Click(object sender, EventArgs e)
+        {
+            Article.choosen.title = lbl_Title4.Text;
+            Article.choosen.Category = lbl_Category4.Text;
+            Read_Article read_Article = new Read_Article();
+            read_Article.ShowDialog();
+        }
     }
 }
