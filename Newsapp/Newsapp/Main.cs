@@ -243,7 +243,7 @@ namespace Newsapp
             {
                 Article article = new Article();
                 fl.Controls.Add(article);
-                article.lbl_Category.Text = "Thể loại: " + dr["Category"].ToString();
+                article.lbl_Category.Text = dr["Category"].ToString();
                 article.lbl_Title.Text = dr["titles"].ToString();
                 article.lbl_date.Text = dr["Date"].ToString();
                 article.pic_Article.ImageLocation = dr["Represent"].ToString();
@@ -323,15 +323,7 @@ namespace Newsapp
             btn_Entertain.BackColor = Color.FromArgb(30, 40, 45);
 
         }
-        private void btn_KhuyenMai_MouseMove(object sender, MouseEventArgs e)
-        {
-            btn_KhuyenMai.BackColor = Color.YellowGreen;
 
-        }
-        private void btn_KhuyenMai_MouseLeave(object sender, EventArgs e)
-        {
-            btn_KhuyenMai.BackColor = Color.FromArgb(30, 40, 45);
-        }
         private void btn_DangBaiBao_MouseMove(object sender, MouseEventArgs e)
         {
             //btn_DangBaiBao.BackColor = Color.YellowGreen;

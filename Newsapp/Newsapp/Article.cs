@@ -40,6 +40,7 @@ namespace Newsapp
         private void pic_Article_Click(object sender, EventArgs e)
         {
             choosen.title = lbl_Title.Text;
+            choosen.Category = lbl_Category.Text;
             Read_Article read_Article = new Read_Article();
             read_Article.ShowDialog();
 

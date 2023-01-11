@@ -42,7 +42,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_KhuyenMai = new System.Windows.Forms.Button();
             this.btn_Entertain = new System.Windows.Forms.Button();
             this.btn_Sport = new System.Windows.Forms.Button();
             this.btn_Travel = new System.Windows.Forms.Button();
@@ -104,7 +103,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1385, 106);
             this.panel1.TabIndex = 1;
@@ -188,7 +187,7 @@
             "Vinh Long",
             "Yen Bai"});
             this.comboBox1.Location = new System.Drawing.Point(1004, 53);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 9;
@@ -208,7 +207,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(1248, 32);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +220,7 @@
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(945, 38);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(39, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +233,7 @@
             this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search.ForeColor = System.Drawing.Color.Silver;
             this.txt_Search.Location = new System.Drawing.Point(578, 38);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Search.Multiline = true;
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(372, 35);
@@ -248,7 +247,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(368, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(188, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -259,7 +258,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(274, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -270,14 +269,13 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.btn_KhuyenMai);
             this.panel2.Controls.Add(this.btn_Entertain);
             this.panel2.Controls.Add(this.btn_Sport);
             this.panel2.Controls.Add(this.btn_Travel);
             this.panel2.Controls.Add(this.btn_Home);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 106);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1385, 39);
             this.panel2.TabIndex = 0;
@@ -289,24 +287,6 @@
             this.panel3.Size = new System.Drawing.Size(264, 555);
             this.panel3.TabIndex = 5;
             // 
-            // btn_KhuyenMai
-            // 
-            this.btn_KhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_KhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btn_KhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KhuyenMai.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_KhuyenMai.Location = new System.Drawing.Point(643, 0);
-            this.btn_KhuyenMai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_KhuyenMai.Name = "btn_KhuyenMai";
-            this.btn_KhuyenMai.Size = new System.Drawing.Size(123, 40);
-            this.btn_KhuyenMai.TabIndex = 5;
-            this.btn_KhuyenMai.Text = "Khuyến mãi";
-            this.btn_KhuyenMai.UseVisualStyleBackColor = false;
-            this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click);
-            this.btn_KhuyenMai.MouseLeave += new System.EventHandler(this.btn_KhuyenMai_MouseLeave);
-            this.btn_KhuyenMai.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_KhuyenMai_MouseMove);
-            // 
             // btn_Entertain
             // 
             this.btn_Entertain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -315,7 +295,7 @@
             this.btn_Entertain.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Entertain.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Entertain.Location = new System.Drawing.Point(486, 2);
-            this.btn_Entertain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Entertain.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Entertain.Name = "btn_Entertain";
             this.btn_Entertain.Size = new System.Drawing.Size(145, 36);
             this.btn_Entertain.TabIndex = 3;
@@ -333,7 +313,7 @@
             this.btn_Sport.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sport.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Sport.Location = new System.Drawing.Point(412, -1);
-            this.btn_Sport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Sport.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Sport.Name = "btn_Sport";
             this.btn_Sport.Size = new System.Drawing.Size(70, 38);
             this.btn_Sport.TabIndex = 2;
@@ -351,7 +331,7 @@
             this.btn_Travel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Travel.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Travel.Location = new System.Drawing.Point(337, -1);
-            this.btn_Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Travel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Travel.Name = "btn_Travel";
             this.btn_Travel.Size = new System.Drawing.Size(70, 40);
             this.btn_Travel.TabIndex = 1;
@@ -369,7 +349,7 @@
             this.btn_Home.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Home.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Home.Location = new System.Drawing.Point(262, 0);
-            this.btn_Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Size = new System.Drawing.Size(70, 37);
             this.btn_Home.TabIndex = 0;
@@ -394,7 +374,7 @@
             // Pic_hot_1
             // 
             this.Pic_hot_1.Location = new System.Drawing.Point(86, 148);
-            this.Pic_hot_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic_hot_1.Margin = new System.Windows.Forms.Padding(2);
             this.Pic_hot_1.Name = "Pic_hot_1";
             this.Pic_hot_1.Size = new System.Drawing.Size(596, 295);
             this.Pic_hot_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -418,7 +398,7 @@
             // pic_hot_2
             // 
             this.pic_hot_2.Location = new System.Drawing.Point(686, 149);
-            this.pic_hot_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_hot_2.Margin = new System.Windows.Forms.Padding(2);
             this.pic_hot_2.Name = "pic_hot_2";
             this.pic_hot_2.Size = new System.Drawing.Size(630, 146);
             this.pic_hot_2.TabIndex = 14;
@@ -427,7 +407,7 @@
             // pic_hot_3
             // 
             this.pic_hot_3.Location = new System.Drawing.Point(686, 300);
-            this.pic_hot_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_hot_3.Margin = new System.Windows.Forms.Padding(2);
             this.pic_hot_3.Name = "pic_hot_3";
             this.pic_hot_3.Size = new System.Drawing.Size(304, 143);
             this.pic_hot_3.TabIndex = 15;
@@ -436,7 +416,7 @@
             // pic_hot_4
             // 
             this.pic_hot_4.Location = new System.Drawing.Point(994, 300);
-            this.pic_hot_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_hot_4.Margin = new System.Windows.Forms.Padding(2);
             this.pic_hot_4.Name = "pic_hot_4";
             this.pic_hot_4.Size = new System.Drawing.Size(322, 143);
             this.pic_hot_4.TabIndex = 16;
@@ -572,7 +552,7 @@
             this.flp_TinXemNhieuNhat.AllowDrop = true;
             this.flp_TinXemNhieuNhat.AutoScroll = true;
             this.flp_TinXemNhieuNhat.Location = new System.Drawing.Point(994, 447);
-            this.flp_TinXemNhieuNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flp_TinXemNhieuNhat.Margin = new System.Windows.Forms.Padding(2);
             this.flp_TinXemNhieuNhat.Name = "flp_TinXemNhieuNhat";
             this.flp_TinXemNhieuNhat.Size = new System.Drawing.Size(334, 313);
             this.flp_TinXemNhieuNhat.TabIndex = 31;
@@ -611,7 +591,7 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 784);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1385, 110);
             this.panel4.TabIndex = 37;
@@ -643,7 +623,7 @@
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(165, 43);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(26, 28);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -654,7 +634,7 @@
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(165, 10);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(26, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -720,7 +700,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -758,7 +738,6 @@
         private System.Windows.Forms.Button btn_Travel;
         private System.Windows.Forms.Button btn_Home;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btn_KhuyenMai;
         private System.Windows.Forms.FlowLayoutPanel flp_News;
         private ElipseToolDemo.ElipseControl elipseControl1;
         private System.Windows.Forms.PictureBox Pic_hot_1;
