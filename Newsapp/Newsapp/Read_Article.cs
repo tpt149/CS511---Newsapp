@@ -9,7 +9,8 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Net;
+using System.Net.Mail;
 namespace Newsapp
 {
     public partial class Read_Article : Form
@@ -48,6 +49,7 @@ namespace Newsapp
         }
         private void Read_Article_Load(object sender, EventArgs e)
         {
+            
             foreach(DataRow dr in Main.table_All.Rows)
             {
                 if (Article.choosen.title == dr["titles"].ToString())
@@ -113,32 +115,79 @@ namespace Newsapp
             Label YKien = new Label();
             YKien.Text = "Ý kiến";
             //YKien.Font.Size = 11;
-            Panel_Article.Controls.Add(rod);
+            Panel_Article.Controls.Add(YKien);
             YKien.Location = new Point(92, 700);
 
-            RichTextBox comment = new RichTextBox();
+
             Panel_Article.Controls.Add(comment);
-            comment.Size = new Size(845,70);
-            comment.Location = new Point(92,715);
+            comment.Size = new Size(750,35);
+            comment.Location = new Point(92,725);
             
 
+            Button Send = new Button();
+            Panel_Article.Controls.Add(Send);
+            Send.Text = "Gửi";
+            Send.Location = new Point(850,725);
+            Send.Size = new Size(70, 60);
+            Send.TextAlign=ContentAlignment.MiddleCenter;
+            Send.Click += Add_user_comment;
 
-            Panel comment_stored = new Panel();
-            Panel_Article.Controls.Add(comment_stored);
-            comment_stored.Size = new Size(850,300);
-            comment_stored.AutoScroll = true;
-            comment_stored.Location = new Point(92, 780);
-
-         
-            //comment.KeyDown += EventKeyDownComment(comment, Panel_Article);
             #endregion
         }
+        RichTextBox comment = new RichTextBox();
+        int Location_Y = 700;
+        int Location_X = 92;
+        DataTable Comment_Stored = new DataTable();
+        private void Add_user_comment(object sender, EventArgs e)
+        {
+            Random rd = new Random();
+            int ID = rd.Next(999999, 999999999);
+            user_comment user = new user_comment();
+            Panel_Article.Controls.Add(user);
+            user.lbl_content.Text = comment.Text;
+            user.lbl_UserID.Text = "UserID" + ID.ToString();
 
+            user.Size = new Size(750, 90);
+            user.Location = new Point(Location_X, Location_Y);
 
+            comment.Text = "";
+            Location_Y += 100;
+        }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_Share_by_Gmail_Click(object sender, EventArgs e)
+        {
+        //    string from, pass, content;
+        //    from = txtSender.Text.Trim();
+        //    pass = txtPass.Text.Trim();
+        //    content = txtContent.Text;
+
+        //    MailMessage message = new MailMessage();
+        //    message.From = new MailAddress(from);
+        //    message.Subject = "Newsapp C#";
+        //    message.To.Add(new MailAddress("newsapp1201@gmail.com"));
+        //    message.Body = "<html><body>" + content + " </body></html>";
+        //    message.IsBodyHtml = true;
+
+        //    var smtpClient = new SmtpClient("smtp.gmail.com")
+        //    {
+        //        Port = 587,
+        //        Credentials = new NetworkCredential(from, pass),
+        //        EnableSsl = true,
+        //    };
+        //    try
+        //    {
+        //        smtpClient.Send(message);
+        //        MessageBox.Show("Mail sent successfully.", "Email.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
         }
     }
 }

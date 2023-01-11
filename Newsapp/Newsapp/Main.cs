@@ -116,7 +116,7 @@ namespace Newsapp
             else if (lbl_Category1.Text == "Entertain")
             {
                 lbl_Category1.BackColor = Color.Orange;
-                lbl_Category1.ForeColor = Color.YellowGreen;
+                lbl_Category1.ForeColor = Color.LightYellow;
 
             }
             else
@@ -126,8 +126,6 @@ namespace Newsapp
             }
             #endregion
 
-            //var ar1_title = Pic_hot_1.PointToScreen(lbl_Title1.Location);
-            //ar1_title = Pic_hot_1.PointToClient(ar1_title);
             lbl_Title1.Parent = Pic_hot_1;
             lbl_Title1.BackColor = Color.Transparent;
             lbl_Author1.Parent = Pic_hot_1;
@@ -286,17 +284,28 @@ namespace Newsapp
         {
             flp_News.Controls.Clear();
             Display_News(Table_News_Travel, flp_News);
+            lbl_Category.Text = "Travel";
+            lbl_Category.BackColor = Color.Green;
+            lbl_Category.ForeColor = Color.Yellow;
         }
         private void btn_Sport_Click(object sender, EventArgs e)
         {
             flp_News.Controls.Clear();
             Display_News(Table_News_Sport, flp_News);
+            lbl_Category.Text = "Sport";
+            lbl_Category.BackColor = Color.Yellow;
+            lbl_Category.ForeColor = Color.DarkRed;
+            
         }
         private void btn_Entertain_Click(object sender, EventArgs e)
         {
             btn_Entertain.BackColor = Color.YellowGreen;
             flp_News.Controls.Clear();
             Display_News(Table_News_Entertain, flp_News);
+            lbl_Category.Text = "Entertain";
+            lbl_Category.BackColor = Color.Orange;
+            lbl_Category.ForeColor = Color.LightYellow;
+
         }
         private void btn_Home_Click(object sender, EventArgs e)
         {
@@ -304,6 +313,7 @@ namespace Newsapp
             Display_News(Table_News_Entertain, flp_News);
             Display_News(Table_News_Sport, flp_News);
             Display_News(Table_News_Travel, flp_News);
+            lbl_Category.Text = "Thể Loại";
         }
         #region MouseMove_MouseLeave
         private void btn_Home_MouseMove(object sender, MouseEventArgs e)
@@ -353,12 +363,7 @@ namespace Newsapp
         }
         #endregion
         //public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
-        private void btn_KhuyenMai_Click(object sender, EventArgs e)
-        {
 
-
-            //Phải có dữ liệu về các bài báo có khuyến mãi --> thu thập thêm dữ liệu
-        }
         private void txt_Search_Enter(object sender, EventArgs e)
         {
             if(txt_Search.Text== "Nhập từ khóa...")
@@ -460,5 +465,7 @@ namespace Newsapp
             Read_Article read_Article = new Read_Article();
             read_Article.ShowDialog();
         }
+
+
     }
 }

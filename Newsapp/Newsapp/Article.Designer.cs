@@ -33,7 +33,7 @@
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_Author = new System.Windows.Forms.Label();
             this.lbl_Category = new System.Windows.Forms.Label();
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
+
             ((System.ComponentModel.ISupportInitialize)(this.pic_Article)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,8 +96,7 @@
             // 
             // elipseControl1
             // 
-            this.elipseControl1.CornerRadius = 35;
-            this.elipseControl1.TargetControl = this;
+
             // 
             // Article
             // 
@@ -124,7 +123,7 @@
         public System.Windows.Forms.Label lbl_Title;
         public System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Label lbl_Author;
-        private ElipseToolDemo.ElipseControl elipseControl1;
         public System.Windows.Forms.Label lbl_Category;
+
     }
 }

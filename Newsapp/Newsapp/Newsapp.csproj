@@ -62,9 +62,6 @@
     <Compile Include="Article.Designer.cs">
       <DependentUpon>Article.cs</DependentUpon>
     </Compile>
-    <Compile Include="ElipseControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="high_view_Article.cs">
       <SubType>UserControl</SubType>
     </Compile>

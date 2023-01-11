@@ -33,6 +33,7 @@
             this.lbl_view = new System.Windows.Forms.Label();
             this.pic_hight_view_Article = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
             ((System.ComponentModel.ISupportInitialize)(this.pic_hight_view_Article)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,10 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // elipseControl1
+            // 
+
+            // 
             // high_view_Article
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,5 +111,6 @@
         public System.Windows.Forms.Label lbl_view;
         public System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.PictureBox pictureBox1;
+
     }
 }
