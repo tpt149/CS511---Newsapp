@@ -160,7 +160,7 @@ namespace Newsapp
             #endregion
             #region Bài báo 2
             DataRow dr2 = table_All_Sort_By_Date.Rows[1];
-            pic_hot_2.ImageLocation = dr2["Represent"].ToString();
+            
             pic_hot_2.Show();
             lbl_Date2.Text = dr2["Date"].ToString();
             lbl_Title2.Text = dr2["titles"].ToString();
@@ -263,6 +263,7 @@ namespace Newsapp
                 Article article = new Article();
                 fl.Controls.Add(article);
                 article.lbl_Category.Text = dr["Category"].ToString();
+                article.lbl_Author.Text = dr["Author"].ToString();
                 article.lbl_Title.Text = dr["titles"].ToString();
                 article.lbl_date.Text = dr["Date"].ToString();
                 article.pic_Article.ImageLocation = dr["Represent"].ToString();
@@ -281,6 +282,7 @@ namespace Newsapp
                 article.pic_hight_view_Article.ImageLocation = dr["Represent"].ToString();
                 article.pic_hight_view_Article.SizeMode = PictureBoxSizeMode.StretchImage;
                 article.pic_hight_view_Article.Show();
+                article.lbl_Category.Text = dr["Category"].ToString();
             }
         }
         private void btn_Travel_Click(object sender, EventArgs e)
@@ -316,7 +318,9 @@ namespace Newsapp
             Display_News(Table_News_Entertain, flp_News);
             Display_News(Table_News_Sport, flp_News);
             Display_News(Table_News_Travel, flp_News);
-            lbl_Category.Text = "Thể Loại";
+            lbl_Category.Text = "All News";
+            lbl_Category.BackColor = Color.FromArgb(30, 40, 45);
+            lbl_Category.ForeColor = Color.White;
         }
         #region MouseMove_MouseLeave
         private void btn_Home_MouseMove(object sender, MouseEventArgs e)
@@ -365,7 +369,7 @@ namespace Newsapp
             //btn_DangBaiBao.BackColor = Color.FromArgb(30, 40, 45);
         }
         #endregion
-        //public static List<Paper> List_Article_Sort_By_View = new List<Paper>();
+
 
         private void txt_Search_Enter(object sender, EventArgs e)
         {

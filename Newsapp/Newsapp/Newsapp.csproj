@@ -246,6 +246,7 @@
     <Content Include="Image\Travel\7.jpg" />
     <Content Include="Image\Travel\8.jpg" />
     <Content Include="Image\Travel\9.jpg" />
+    <None Include="Resources\exit.png" />
     <None Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup />

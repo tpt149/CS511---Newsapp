@@ -31,5 +31,13 @@ namespace Newsapp
         {
 
         }
+
+        private void pic_hight_view_Article_Click(object sender, EventArgs e)
+        {
+            Article.choosen.title = lbl_title.Text;
+            Article.choosen.Category = lbl_Category.Text;
+            Read_Article read_Article = new Read_Article();
+            read_Article.ShowDialog();
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace Newsapp
             InitializeComponent();
             fpl_Emoji.Visible = false;
             txtContent.Text = link + "\n";
+            txtSubject.Text = Read_Article.subject;
         }
         bool a = false;
         private void btn_emoji_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace Newsapp
             MailMessage message = new MailMessage();
             message.From = new MailAddress(from);
             message.Subject = subject;
-            message.To.Add(new MailAddress("newsapp1201@gmail.com"));
+            message.To.Add(new MailAddress(txt_MailTo.Text));
             message.Body = "<html><body>" + content + " </body></html>";
             message.IsBodyHtml = true;
 

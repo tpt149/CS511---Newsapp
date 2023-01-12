@@ -98,6 +98,7 @@ namespace Newsapp
                         a.lbl_view.Text = row["View"].ToString();
                         a.pic_hight_view_Article.ImageLocation = row["Represent"].ToString();
                         a.pic_hight_view_Article.Show();
+                        a.lbl_Category.Text = row["Category"].ToString();
                     }
                     break;
                 }
@@ -110,11 +111,12 @@ namespace Newsapp
             rod.BackColor = Color.Black;
             rod.Size = new Size(845,3);
             Panel_Article.Controls.Add(rod);
+            rod.SendToBack();
             rod.Location = new Point(92, 690);
 
             Label YKien = new Label();
             YKien.Text = "Ý kiến";
-            //YKien.Font.Size = 11;
+            YKien.Font = new Font("Arial", 13);
             Panel_Article.Controls.Add(YKien);
             YKien.Location = new Point(92, 700);
 
@@ -122,13 +124,20 @@ namespace Newsapp
             Panel_Article.Controls.Add(comment);
             comment.Size = new Size(750,35);
             comment.Location = new Point(92,725);
-            
+            comment.Font = new Font("Arial", 15);
+            Panel_Article.Controls.Add(btn_emoji);
+            Panel_Article.Controls.Add(fpl_Emoji);
+            comment.SendToBack();
+            btn_emoji.Location = new Point(815, 725);
+            fpl_Emoji.Location = new Point(810, 560);
+
 
             Button Send = new Button();
             Panel_Article.Controls.Add(Send);
             Send.Text = "Gửi";
             Send.Location = new Point(850,725);
-            Send.Size = new Size(70, 60);
+            Send.Size = new Size(70, 40);
+            Send.Font = new Font("Arial", 13);
             Send.TextAlign=ContentAlignment.MiddleCenter;
             Send.Click += Add_user_comment;
 
@@ -146,7 +155,7 @@ namespace Newsapp
                     user.lbl_UserID.Text = dr["UserID"].ToString();
 
                     user.Size = new Size(750, 90);
-                    user.Location = new Point(Location_X, Location_Y);
+                    user.Location = new Point(Location_X, Location_Y + 70);
 
                     Location_Y += 100;
                 }
@@ -155,6 +164,7 @@ namespace Newsapp
             #endregion
         }
         RichTextBox comment = new RichTextBox();
+        
         int Location_Y = 700;
         int Location_X = 92;
 
@@ -187,12 +197,19 @@ namespace Newsapp
         {
             this.Close();
         }
-
+        public static string subject;
         private void btn_Share_by_Gmail_Click(object sender, EventArgs e)
         {
-            string link = "abc";
-            Share s = new Share(link);  // truyền vô string link 
-            s.Show();
+            foreach(DataRow r in Main.table_All.Rows) {
+                if (r["titles"].ToString() == Article.choosen.title)
+                {
+                    subject = r["descriptions"].ToString();
+                    string link = r["links"].ToString();
+                    Share s = new Share(link);  // truyền vô string link 
+                    s.Show();
+                    break;
+                }
+            }
         }
         private int imageNumber = 1;
         private void LoadNextImage()
@@ -216,19 +233,19 @@ namespace Newsapp
             {
                 System.Diagnostics.Process.Start("https://sapuwa.com/?gclid=EAIaIQobChMIqOjnj--q_AIVnL2WCh00ZAAWEAAYASAAEgIMqPD_BwE&gidzl=Xh9qHuAi0Ks4hN90XR07I8AeSa6QlmaRoVOg59teK4wUz2SKaBW06vMb9qQHl5DBngPqHpWsBq8xWQa1Jm");
             }
-            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\2.jpg")
+            else if (Pic_ads.ImageLocation == "P:\\CS511\\Final_Project\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\2.jpg")
             {
                 System.Diagnostics.Process.Start("https://benhvienanviet.com/vi/tham-kham-mien-phi-giam-chi-phi-dieu-tri-tai-benh-vien-an-viet-n1232");
             }
-            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\3.jpg")
+            else if (Pic_ads.ImageLocation == "P:\\CS511\\Final_Project\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\3.jpg")
             {
                 System.Diagnostics.Process.Start("https://rosamiahotel.com/");
             }
-            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\4.jpg")
+            else if (Pic_ads.ImageLocation == "P:\\CS511\\Final_Project\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\4.jpg")
             {
                 System.Diagnostics.Process.Start("https://www.vinamilk.com.vn/vi");
             }
-            else if (Pic_ads.ImageLocation == @"P:\CS511\Final_Project\CS511---Newsapp\Newsapp\Newsapp\Image\Ads\5.jpg")
+            else if (Pic_ads.ImageLocation == "P:\\CS511\\Final_Project\\CS511---Newsapp\\Newsapp\\Newsapp\\Image\\Ads\\5.jpg")
             {
                 System.Diagnostics.Process.Start("https://www.sabeco.com.vn/truyen-thong/tin-tuc-su-kien/huyen-thoai-bia-saigon-special-tai-xuat");
             }
@@ -238,5 +255,86 @@ namespace Newsapp
         {
             slidePic_Click(sender, e);
         }
+        bool a = false;
+        private void btn_emoji_Click(object sender, EventArgs e)
+        {
+            if (a == false)
+            {
+                fpl_Emoji.Visible = true;
+                btn_Share_by_Gmail.SendToBack();
+                lbl_share.SendToBack();
+                a = true;
+            }
+            else
+            {
+                fpl_Emoji.Visible = false;
+                a = false;
+            }
+        }
+
+
+
+
+        private void ptb_Kiss_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Kissing_Heart;
+        }
+
+        private void ptb_ClosedEye_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Stuck_Out_Tongue_Closed_Eyes;
+        }
+
+        private void ptb_Joy_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Joy;
+        }
+
+        private void ptb_Sweat_Smile_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Sweat_Smile;
+        }
+
+        private void ptb_smile_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Smile;
+        }
+
+        private void ptb_HeartEyes_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Heart_Eyes;
+        }
+
+        private void ptb_Cry_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Cry;
+        }
+
+        private void ptb_Unamused_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Unamused;
+        }
+
+        private void ptb_Angry_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Angry;
+        }
+
+        private void ptb_dissappointed_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Disappointed;
+        }
+
+
+        private void ptb_Triumph_Click(object sender, EventArgs e)
+        {
+            comment.Text = comment.Text.Trim() + Emoji.Triumph;
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
+
 }
